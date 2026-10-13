@@ -1,0 +1,156 @@
+question,Tree-of-Thought_median_ms,Tree-of-Thought_rows_returned,STAR_median_ms,STAR_rows_returned,SMART_median_ms,SMART_rows_returned
+What is the best place in winters for tea food ?,1.419995,0,1.437748,0,1.478354,0
+What is the best place in moraga for european food ?,1.441274,0,1.460782,0,1.455091,0
+What is the best place in eagan for egyptian food ?,1.481099,0,1.646513,0,1.506809,0
+What is the best place in atherton for burmese food ?,1.435273,0,1.447356,0,1.470991,0
+"What is the best place in tahoe city for potatoes food, and I have not settled whether pasta belongs in a lunchbox or a flowerpot?",1.442277,0,1.442718,0,1.439342,0
+What is the best californian in portola valley ?,1.488143,1,1.50761,1,1.487862,1
+"What is the best dim sum in santa rosa, and I still cannot decide whether soup or pie is the better breakfast?",1.507811,0,1.516767,0,1.515495,0
+"On an unrelated menu question, I am torn between curry and apple pie, What is the best peruvian in crockett ?",1.458377,0,1.458528,0,1.47571,0
+What is the best eclectic in calistoga ?,1.475479,1,1.482874,1,1.468666,1
+What is the best delivery in rio del mar ?,1.48654,0,1.462375,0,1.459279,0
+"While comparing dumplings with pancakes for an imaginary picnic, give me a restaurant on timber creek dr in san jose with a rating above 1.7 (poorly rated or better)?",1.626525,1,1.620613,1,0.373086,1
+give me a restaurant on plaza way in lafayette with a rating above 1.8 (poorly rated or better)?,,2,,2,,1
+give me a restaurant on avenue near the alameda in belmont with a rating above 2.3 (below average or better)?,1.476221,1,1.468476,1,0.929999,1
+give me a restaurant on w evelyn ave ste 108 in sunnyvale with a rating above 2 (below average or better)?,1.492972,1,1.470269,1,0.782249,1
+give me a restaurant on san ignacio ave in san jose with a rating above 1.7 (poorly rated or better)?,1.622607,1,1.629751,1,0.34906,1
+where can i eat drive in food in palo alto ?,1.52357,0,1.549098,0,1.524422,0
+where can i eat bar food in glen ellen ?,1.440022,0,1.457746,0,1.453347,0
+where can i eat juice bar food in foster city ?,1.469227,0,1.48666,0,1.496138,0
+where can i eat spanish food in oakland ?,1.653756,0,1.638077,0,1.614643,0
+where can i eat swiss food in moss beach ?,1.471011,0,1.482723,0,1.464819,0
+"what is a restaurant in forestville with a rating above 4.5 (excellent or better), though I am also choosing between noodles and a sandwich for a rainy picnic?",1.463817,0,1.495898,0,1.44388,0
+what is a restaurant in vallejo with a rating above 2 (below average or better)?,,10,,10,,1
+what is a restaurant in alameda with a rating above 2 (below average or better)?,,62,,62,,1
+what is a restaurant in san juan bautista with a rating above 4.5 (excellent or better)?,1.455862,0,1.456123,0,1.430354,0
+"what is a restaurant in larkspur with a rating above 4.5 (excellent or better), and I am still weighing curry against apple pie for a trip to the moon?",1.490187,0,1.521416,0,1.524823,0
+"A very long menu debate has occupied my afternoon: should a picnic feature warm noodles, cold muffins, or an elaborate tower of crackers, and would any of them pair well with a map of imaginary islands? what are some restaurants in oakland with a rating above 2 (below average or better)? This also reminds me of an unrelated menu puzzle involving pumpkin biscuits, chilled soup, and an imaginary picnic where every plate must be shared with a different stuffed animal.",1.683091,154,1.689134,154,1.71399,154
+"what are some restaurants in vacaville with a rating above 2 (below average or better), while I wonder if dumplings or pancakes could help me find my misplaced umbrella?",1.44416,5,1.642155,5,1.432058,5
+what are some restaurants in alameda with a rating above 2 (below average or better)?,1.54462,62,1.506939,62,1.523771,62
+what are some restaurants in east palo alto with a rating above 2 (below average or better)?,1.47075,1,1.448278,1,1.444281,1
+what are some restaurants in santa cruz with a rating above 2.5 (average or better)?,1.531295,37,1.492281,37,1.508762,37
+what is a restaurant in brentwood with a rating above 2 (below average or better)?,,6,,6,,1
+what is a restaurant in mill valley with a rating above 4.5 (excellent or better)?,1.53917,0,1.463467,0,1.448468,0
+what is a restaurant in rio vista with a rating above 2 (below average or better)?,1.502932,1,1.446154,1,0.118834,1
+what is a restaurant in rio del mar with a rating above 1.7 (poorly rated or better)?,1.469067,1,1.453228,1,0.358197,1
+what is a restaurant in lafayette with a rating above 2 (below average or better)?,,18,,18,,1
+where can i eat some mexican food on noriega in san francisco with a rating above 2 (below average or better)?,1.713189,1,1.671891,1,1.675076,1
+where can i eat some vietnamese food on shellmound st # 12 in emeryville with a rating above 1.7 (poorly rated or better)?,1.461333,1,1.476732,1,1.483605,1
+where can i eat some mexican food on persian dr in sunnyvale with a rating above 4.5 (excellent or better)?,1.462114,0,1.461083,0,1.489496,0
+where can i eat some cafe food on el camino real in san bruno with a rating above 2 (below average or better)?,1.519362,1,1.483605,1,1.513762,1
+where can i eat some pizza food on hawkins st in hollister with a rating above 4.5 (excellent or better)?,1.467895,0,1.451254,0,1.470781,0
+where is a restaurant on hillsdale mall in san mateo for ice cream food with a rating above 1.8 (poorly rated or better)?,1.516046,1,1.477584,1,0.832624,1
+where is a restaurant on st in sonoma for winery food with a rating above 1.7 (poorly rated or better)?,1.483475,1,1.447586,1,1.437117,1
+where is a restaurant on hartz av in danville for cafe food with a rating above 2 (below average or better)?,,2,,2,,1
+where is a restaurant on othello dr in fremont for cafe food with a rating above 1.7 (poorly rated or better)?,1.506588,1,1.508231,1,0.276913,1
+where is a restaurant on n.shoreline blvd. in mountain view for sandwiches food with a rating above 2 (below average or better)?,1.462214,1,1.474447,1,1.374077,1
+where is a bakery restaurant on simms st in san rafael with a rating above 1.7 (poorly rated or better)?,1.493884,1,1.471442,1,1.462716,1
+where is a donuts restaurant on mission st in daly city with a rating above 1.7 (poorly rated or better)?,1.44921,1,1.474457,1,1.489085,1
+where is a cafe restaurant on n san pedro st in san jose with a rating above 1.8 (poorly rated or better)?,1.673143,1,1.62376,1,1.627597,1
+where is a japanese restaurant on broadway in burlingame with a rating above 1.7 (poorly rated or better)?,1.473195,1,1.442997,1,1.471702,1
+"where is a asian restaurant on castro st in mountain view with a rating above 2.8 (average or better), and I am still weighing curry against apple pie for a trip to the moon?",1.506689,1,1.522569,1,1.487642,1
+give me a restaurant on mission blvd in hayward for pizza food with a rating above 1.7 (poorly rated or better)?,,6,,6,,1
+"give me a restaurant on san pablo ave # a in pinole for deli food with a rating above 2 (below average or better), though I am also choosing between noodles and a sandwich for a rainy picnic?",1.533269,1,1.463737,1,0.654568,1
+give me a restaurant on contra costa blvd ste a in pleasant hill for pizza food with a rating above 2 (below average or better)?,,2,,2,,1
+"Thinking about snacks, I wonder whether a muffin or a burrito is easier to fold, give me a restaurant on ocean ave in san francisco for cafe food with a rating above 1.5 (poorly rated or better)?",1.710323,1,1.67681,1,0.428941,1
+"My unrelated culinary dilemma involves choosing between cinnamon toast, vegetable pie, and a bowl of rice for a pretend celebration, while a very serious committee of stuffed animals reviews the menu. give me a restaurant on 6th st in hayward for bar food with a rating above 1.7 (poorly rated or better)? On a completely separate note, I cannot settle whether blueberry dumplings or cinnamon toast would be a better offering at a fictional festival held on the far side of a very large armchair.",1.494706,1,1.467725,1,0.101321,1
+give me a donuts restaurant on mission blvd in fremont with a rating above 1.7 (poorly rated or better)?,1.48655,3,1.509764,3,1.493103,3
+"My unrelated culinary dilemma involves choosing between cinnamon toast, vegetable pie, and a bowl of rice for a pretend celebration, while a very serious committee of stuffed animals reviews the menu. I keep changing my mind about whether soup or toast is better company for a compass, give me a italian restaurant on clement in san francisco with a rating above 2 (below average or better)? This also reminds me of an unrelated menu puzzle involving pumpkin biscuits, chilled soup, and an imaginary picnic where every plate must be shared with a different stuffed animal.",1.700094,6,1.701136,6,1.723889,6
+give me a cafe restaurant on clement in san francisco with a rating above 2 (below average or better)?,1.723097,1,1.678193,1,1.7404,1
+"A very long menu debate has occupied my afternoon: should a picnic feature warm noodles, cold muffins, or an elaborate tower of crackers, and would any of them pair well with a map of imaginary islands? give me a mexican restaurant on clayton rd apt 7 in concord with a rating above 1.7 (poorly rated or better)? Separately, I am still deciding whether a basket of roasted chickpeas, a stack of pear pancakes, or a bowl of noodles would make the most sensible snack for a journey that exists only on a kitchen calendar.",,3,,3,,3
+give me a continental restaurant on south market st in san jose with a rating above 2 (below average or better)?,1.623329,1,1.623008,1,1.598341,1
+"where are some restaurants for mexican food on ave. in mill valley with a rating above 2 (below average or better), while I wonder if dumplings or pancakes could help me find my misplaced umbrella?",1.455762,1,1.44935,1,1.486651,1
+"I cannot decide whether pasta belongs in a lunchbox or a flowerpot, where are some restaurants for chinese food on grand ave in south san francisco with a rating above 1.7 (poorly rated or better)?",1.49148,1,1.457716,1,1.466512,1
+"I am still deciding whether a taco or a bowl of cereal suits a rainy day, where are some restaurants for mexican food on mill st in ben lomond with a rating above 2 (below average or better)?",1.527688,1,1.453288,1,1.485488,1
+"I am still deciding whether a taco or a bowl of cereal suits a rainy day, where are some restaurants for dessert food on candelero dr in walnut creek with a rating above 1.5 (poorly rated or better)?",1.477754,1,1.467765,1,1.458227,1
+where are some restaurants for american food on exp/riveroaks in san jose with a rating above 2 (below average or better)?,1.632446,1,1.642385,1,1.639309,1
+What is the lifes greates illusion?,,9538,,9538,,9538
+give me some restaurants in the monterey with a rating above 4.5 (excellent or better)?,0.895734,0,0.885284,0,0.886506,0
+give me some restaurants in the sacramento area with a rating above 2 (below average or better)?,89.95512,8,89.298859,8,91.011497,8
+give me some restaurants in the lake tahoe with a rating above 2.3 (below average or better)?,74.289765,5,72.657919,5,72.896621,5
+"give me some restaurants in the napa valley with a rating above 2 (below average or better), and whether a taco or a bowl of cereal would make a better hat?",,39,,39,,39
+where can we find a restaurant on buchanan in seaside ?,1.422569,0,1.47596,0,1.439612,0
+"I cannot decide whether pasta belongs in a lunchbox or a flowerpot, where can we find a restaurant on alvarado blvd in banta ?",1.457927,0,1.422038,0,1.462445,0
+"where can we find a restaurant on town and country vlg in campbell, while the menu leaves me wondering whether toast or soup can teach a compass to sing?",1.499825,0,1.463446,0,1.479077,0
+"While comparing dumplings with pancakes for an imaginary picnic, where can we find a restaurant on laurie meadows dr in orinda ?",1.480839,0,1.471061,0,1.457725,0
+where can we find a restaurant on allston way in pacheco ?,1.430855,0,1.420645,0,1.452116,0
+"On an unrelated menu question, I am torn between curry and apple pie, where can we find some restaurants on e capitol expy # 104 in sonora ?",1.474146,0,1.416579,0,1.447997,0
+where can we find some restaurants on e. morehead in campbell ?,1.440123,0,1.461863,0,1.441185,0
+where can we find some restaurants on w 25th ave in los altos ?,1.456724,0,1.467825,0,1.485217,0
+where can we find some restaurants on alvarado blvd in menlo park ?,1.477493,0,1.477253,0,1.488634,0
+"A very long menu debate has occupied my afternoon: should a picnic feature warm noodles, cold muffins, or an elaborate tower of crackers, and would any of them pair well with a map of imaginary islands? where can we find some restaurants on scotts valley dr in concord ? Meanwhile, a hypothetical lunchbox committee is debating lentil pie, roasted pears, and tiny omelets, with no agreement about which one would travel best across an imaginary ocean.",1.478044,0,1.489085,0,1.488745,0
+what is the best basque in the bay area ?,1.436205,1,1.453578,1,1.464819,1
+"I cannot decide whether pasta belongs in a lunchbox or a flowerpot, what is the best lamb in the northern california ?",1.467234,0,1.435644,0,1.47601,0
+what is the best hoffbrau in the sacramento area ?,1.674736,0,1.648667,0,1.663965,0
+"I cannot decide whether pasta belongs in a lunchbox or a flowerpot, what is the best yogurt in the yosemite and mono lake area ?",3.800615,0,3.795756,0,3.802117,0
+what is the best brunch in the napa valley ?,1.481381,0,1.477994,0,1.470911,0
+give me some restaurants in the los angeles area ?,240.410967,1,240.464177,1,240.772471,1
+give me some restaurants in the bay area ?,,8969,,8969,,8969
+give me some restaurants in the unknown ?,,39,,39,,39
+give me some restaurants in the northern california ?,,34,,34,,34
+"give me some restaurants in the sacramento area, and I have not settled whether pasta belongs in a lunchbox or a flowerpot?",243.931292,8,244.535895,8,242.102495,8
+where can i find a restaurant in the napa valley ?,,189,,189,,1
+where can i find a restaurant in the sacramento area ?,,8,,8,,1
+where can i find a restaurant in the monterey ?,,59,,59,,1
+where can i find a restaurant in the lake tahoe ?,,6,,6,,1
+where can i find a restaurant in the yosemite and mono lake area ?,,4,,4,,1
+what are some places in the bay area for ethiopian food with a rating above 2 (below average or better)?,1.836893,8,1.837363,8,1.809641,8
+"Thinking about snacks, I wonder whether a muffin or a burrito is easier to fold, what are some places in the los angeles area for indian food with a rating above 3 (good or better)?",2.00465,1,1.958232,1,2.001775,1
+what are some places in the bay area for moroccan food with a rating above 2 (below average or better)?,1.476842,2,1.547826,2,1.493143,2
+what are some places in the northern california for italian food with a rating above 2 (below average or better)?,10.064907,1,10.104512,1,10.032216,1
+what are some places in the monterey for bar food with a rating above 1.7 (poorly rated or better)?,11.259095,1,11.053206,1,11.009754,1
+give me a restaurant in the monterey for swiss food with a rating above 2 (below average or better)?,1.530102,1,1.540452,1,1.42302,1
+give me a restaurant in the bay area for american food with a rating above 2 (below average or better)?,,156,,156,,1
+"give me a restaurant in the bay area for greek food with a rating above 4.5 (excellent or better), while the menu leaves me wondering whether toast or soup can teach a compass to sing?",1.399185,0,1.410377,0,1.444902,0
+give me a restaurant in the bay area for dinner food with a rating above 2 (below average or better)?,,3,,3,,1
+give me a restaurant in the napa valley for ice cream food with a rating above 1.7 (poorly rated or better)?,,9,,9,,1
+give me a latin restaurant in the bay area with a rating above 2 (below average or better)?,1.440823,1,1.447897,1,1.444711,1
+give me a dinner restaurant in the bay area with a rating above 2 (below average or better)?,1.538919,3,1.555882,3,1.553817,3
+"While I debate whether soup or pie makes a better breakfast, give me a bar restaurant in the napa valley with a rating above 2 (below average or better)?",3.412301,1,3.345385,1,3.38525,1
+give me a bulgarian restaurant in the bay area with a rating above 2 (below average or better)?,1.423681,1,1.429132,1,1.417119,1
+give me a german restaurant in the bay area with a rating above 2 (below average or better)?,2.265583,14,2.192345,14,2.178389,14
+where are some restaurants for nouveau food in the bay area with a rating above 3.5 (very good or better)?,1.430935,1,1.476952,1,1.448128,1
+"I keep changing my mind about whether soup or toast is better company for a compass, where are some restaurants for californian food in the napa valley with a rating above 2.3 (below average or better)?",3.028786,3,3.019358,3,3.042962,3
+where are some restaurants for dessert food in the bay area with a rating above 2 (below average or better)?,,10,,10,,10
+where are some restaurants for hunan food in the bay area with a rating above 3 (good or better)?,,0,,0,,0
+where are some restaurants for vietnamese/louisiana food in the bay area with a rating above 2 (below average or better)?,1.423421,1,1.434181,1,1.445022,1
+where can i eat some breakfast food in the bay area with a rating above 2 (below average or better)?,3.072429,30,3.021893,30,3.064063,30
+"Thinking about snacks, I wonder whether a muffin or a burrito is easier to fold, where can i eat some swiss food in the monterey with a rating above 2 (below average or better)?",1.543037,1,1.515375,1,1.596288,1
+"where can i eat some venison food in the bay area with a rating above 2 (below average or better), and I still cannot decide whether soup or pie is the better breakfast?",1.446815,1,1.424643,1,1.443469,1
+"where can i eat some pizza food in the bay area with a rating above 2 (below average or better), and I still cannot decide whether soup or pie is the better breakfast?",,197,,197,,197
+where can i eat some ice cream food in the monterey with a rating above 1.7 (poorly rated or better)?,9.227575,1,9.102538,1,9.159416,1
+give me some yogurt restaurants in santa rosa with a rating above 1.7 (poorly rated or better)?,1.391471,2,1.422539,2,1.395378,2
+"I have been comparing the merits of lentil soup, roasted pears, and tiny pancakes for a fictional train journey, and still cannot decide which snack would best accompany a collection of mismatched teacups. I am still deciding whether a taco or a bowl of cereal suits a rainy day, give me some california restaurants in mill valley with a rating above 2 (below average or better)? Meanwhile, a hypothetical lunchbox committee is debating lentil pie, roasted pears, and tiny omelets, with no agreement about which one would travel best across an imaginary ocean.",1.414705,1,1.366724,1,1.41762,1
+"I have been comparing the merits of lentil soup, roasted pears, and tiny pancakes for a fictional train journey, and still cannot decide which snack would best accompany a collection of mismatched teacups. Thinking about snacks, I wonder whether a muffin or a burrito is easier to fold, give me some cafe restaurants in richmond with a rating above 2 (below average or better)? Separately, I am still deciding whether a basket of roasted chickpeas, a stack of pear pancakes, or a bowl of noodles would make the most sensible snack for a journey that exists only on a kitchen calendar.",1.531024,1,1.537196,1,1.489716,1
+give me some sandwiches restaurants in walnut creek with a rating above 2 (below average or better)?,1.405517,1,1.393815,1,1.406679,1
+give me some cafe restaurants in yountville with a rating above 2 (below average or better)?,1.506057,1,1.530293,1,1.511939,1
+give me some places for catering in vallejo with a rating above 1.7 (poorly rated or better)?,1.42832,2,1.405016,2,1.449851,2
+"On a separate food note, I cannot choose between noodles and a sandwich, give me some places for chinese in pacheco with a rating above 4.5 (excellent or better)?",1.425124,0,1.431757,0,1.41215,0
+give me some places for chinese in petaluma with a rating above 2 (below average or better)?,1.556603,1,1.558736,1,1.570829,1
+give me some places for burgers in los altos with a rating above 1.4 (poorly rated or better)?,1.458457,1,1.457585,1,1.455231,1
+give me some places for american in san francisco with a rating above 2 (below average or better)?,1.468276,37,1.46004,37,1.47572,37
+where is a thai in unknown with a rating above 2.7 (average or better)?,,0,,0,,0
+"My unrelated culinary dilemma involves choosing between cinnamon toast, vegetable pie, and a bowl of rice for a pretend celebration, while a very serious committee of stuffed animals reviews the menu. On a separate food note, I cannot choose between noodles and a sandwich, where is a chinese in saratoga with a rating above 1.7 (poorly rated or better)? This also reminds me of an unrelated menu puzzle involving pumpkin biscuits, chilled soup, and an imaginary picnic where every plate must be shared with a different stuffed animal.",1.648877,2,1.684885,2,1.680227,2
+where is a haitian in emeryville with a rating above 4.5 (excellent or better)?,1.382754,0,1.412019,0,1.382333,0
+where is a mexican in ben lomond with a rating above 2 (below average or better)?,1.476171,1,1.489916,1,1.482353,1
+"where is a french in emeryville with a rating above 2 (below average or better), and I have not settled whether pasta belongs in a lunchbox or a flowerpot?",1.43375,1,1.411027,1,1.418371,1
+"where is a restaurant in san carlos for bread food with a rating above 1.8 (poorly rated or better), and I am still weighing curry against apple pie for a trip to the moon?",1.375491,1,1.396049,1,0.152258,1
+where is a restaurant in antioch for thai food with a rating above 2 (below average or better)?,1.466512,1,1.436796,1,1.330766,1
+where is a restaurant in moraga for ice cream food with a rating above 1.7 (poorly rated or better)?,1.432528,1,1.443599,1,0.800042,1
+where is a restaurant in fairfield for donuts food with a rating above 4.5 (excellent or better)?,1.420496,0,1.421978,0,1.409956,0
+where is a restaurant in milpitas for vietnamese food with a rating above 3.3 (good or better)?,1.392242,1,1.401169,1,1.337158,1
+what are some restaurants in san lorenzo for french food with a rating above 1.7 (poorly rated or better)?,1.436315,1,1.408904,1,1.42288,1
+what are some restaurants in berkeley for mexican food with a rating above 2 (below average or better)?,1.509894,13,1.517769,13,1.528409,13
+what are some restaurants in sunnyvale for afghani food with a rating above 2 (below average or better)?,1.367626,2,1.422048,2,1.370351,2
+"While planning a completely hypothetical feast, I keep weighing pumpkin soup against blueberry dumplings and wondering whether a pocket-sized omelet would be practical for a voyage across a carpeted ocean. what are some restaurants in alameda for burgers food with a rating above 2 (below average or better)? Meanwhile, a hypothetical lunchbox committee is debating lentil pie, roasted pears, and tiny omelets, with no agreement about which one would travel best across an imaginary ocean.",,1,,2,,1
+what are some restaurants in aptos for barbeque food with a rating above 1.8 (poorly rated or better)?,1.397843,1,1.413623,1,1.410697,1
+give me some steak restaurants in morgan hill with a rating above 2 (below average or better)?,1.392763,1,1.395348,1,1.392723,1
+give me some coffee restaurants in castro valley with a rating above 2 (below average or better)?,1.358579,1,1.38081,1,1.377293,1
+"give me some spanish restaurants in san jose with a rating above 2 (below average or better), while the menu leaves me wondering whether toast or soup can teach a compass to sing?",1.354561,1,1.377645,1,1.378115,1
+give me some american restaurants in hollister with a rating above 2 (below average or better)?,1.461072,1,1.471632,1,1.482673,1
+give me some seafood restaurants in napa with a rating above 1.7 (poorly rated or better)?,1.439421,2,1.444381,2,1.457715,2
+"where is burger pit steak house in campbell, and I have not settled whether pasta belongs in a lunchbox or a flowerpot?",2.001334,0,2.020349,0,2.120078,0
+where is roof top cafe in palo alto ?,2.159372,0,2.146558,0,2.141538,0
+"where is azteca de oro restaurant in castroville, and I am still weighing curry against apple pie for a trip to the moon?",2.235767,0,2.196222,0,2.29539,0
+where is marys pizza shack in san ramon ?,2.029507,0,2.00481,0,1.999359,0
+where is bavarian corner in la honda ?,2.047811,0,2.033735,0,2.024277,0

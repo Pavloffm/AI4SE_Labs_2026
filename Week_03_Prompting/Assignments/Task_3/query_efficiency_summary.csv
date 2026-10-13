@@ -1,0 +1,4 @@
+approach,queries,shared_correct_queries,repeats_per_query,warmups_per_query,mean_query_ms,median_query_ms,p95_query_ms,estimated_batch_ms,mean_rows_returned,exact_correct,exact_accuracy_percent
+Tree-of-Thought,128,128,7,2,6.8019201406250005,1.4794415,9.227575,870.6457780000001,3.6796875,139,89.6774193548387
+STAR,128,128,7,2,6.784315015625,1.4752085,9.102538,868.392322,3.6796875,140,90.3225806451613
+SMART,128,128,7,2,6.6767581875,1.470951,9.159416,854.625048,3.6796875,128,82.58064516129032

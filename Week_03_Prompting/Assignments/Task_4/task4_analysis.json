@@ -1,0 +1,97 @@
+{
+  "question_count": 155,
+  "timed_question_count": 128,
+  "accuracy": {
+    "Tree of Thought": {
+      "correct": 139,
+      "total": 155,
+      "accuracy_percent": 89.6774193548387,
+      "wilson_95_percent": [
+        83.88999755296504,
+        93.54570526241062
+      ]
+    },
+    "STAR": {
+      "correct": 140,
+      "total": 155,
+      "accuracy_percent": 90.3225806451613,
+      "wilson_95_percent": [
+        84.64739490540437,
+        94.04742502892049
+      ]
+    },
+    "SMART": {
+      "correct": 128,
+      "total": 155,
+      "accuracy_percent": 82.58064516129032,
+      "wilson_95_percent": [
+        75.84208520206784,
+        87.74332930486666
+      ]
+    }
+  },
+  "accuracy_pairwise_tests": {
+    "Tree of Thought versus STAR": {
+      "first_only_correct": 0,
+      "second_only_correct": 1,
+      "accuracy_difference_percentage_points": -0.6451612903225907,
+      "mcnemar_exact_p": 1.0,
+      "holm_adjusted_p": 1.0
+    },
+    "Tree of Thought versus SMART": {
+      "first_only_correct": 11,
+      "second_only_correct": 0,
+      "accuracy_difference_percentage_points": 7.096774193548384,
+      "mcnemar_exact_p": 0.0009765625,
+      "holm_adjusted_p": 0.001953125
+    },
+    "STAR versus SMART": {
+      "first_only_correct": 12,
+      "second_only_correct": 0,
+      "accuracy_difference_percentage_points": 7.741935483870975,
+      "mcnemar_exact_p": 0.00048828125,
+      "holm_adjusted_p": 0.00146484375
+    }
+  },
+  "timing": {
+    "Tree of Thought": {
+      "mean_ms": 6.8019201406250005,
+      "median_ms": 1.4794415,
+      "p95_ms": 9.227575
+    },
+    "STAR": {
+      "mean_ms": 6.784315015625,
+      "median_ms": 1.4752085,
+      "p95_ms": 9.102538
+    },
+    "SMART": {
+      "mean_ms": 6.6767581875,
+      "median_ms": 1.470951,
+      "p95_ms": 9.159416
+    }
+  },
+  "timing_tests": {
+    "friedman_statistic": 2.015625,
+    "friedman_p": 0.36501658064745907,
+    "pairwise": {
+      "Tree of Thought versus STAR": {
+        "median_paired_difference_ms": -0.00020600000000003948,
+        "positive_rank_sum": 4724.0,
+        "wilcoxon_approximate_p": 0.15672025029696315,
+        "holm_adjusted_p": 0.3134405005939263
+      },
+      "Tree of Thought versus SMART": {
+        "median_paired_difference_ms": 0.0030805000000000415,
+        "positive_rank_sum": 5119.0,
+        "wilcoxon_approximate_p": 0.018494895914253455,
+        "holm_adjusted_p": 0.055484687742760365
+      },
+      "STAR versus SMART": {
+        "median_paired_difference_ms": 0.003086000000000033,
+        "positive_rank_sum": 4673.0,
+        "wilcoxon_approximate_p": 0.19535383103423926,
+        "holm_adjusted_p": 0.3134405005939263
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# To evaluate
+```bash
+cp restaurants_dataset_predictions_tot.csv restaurants_dataset_predictions.csv
+python evaluate_retrieval_predictions.py
+
+cp restaurants_dataset_predictions_star.csv restaurants_dataset_predictions.csv
+python evaluate_retrieval_predictions.py
+
+cp restaurants_dataset_predictions_smart.csv restaurants_dataset_predictions.csv
+python evaluate_retrieval_predictions.py
+```
