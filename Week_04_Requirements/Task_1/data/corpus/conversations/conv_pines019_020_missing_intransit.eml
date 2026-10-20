@@ -1,0 +1,126 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Missing and damaged items - we need a report
+Date: Thu, 16 Apr 2009 09:00:00 -0500
+
+Every month I do a shelf reading and mark items as missing or damaged.
+Right now I have no easy way to generate a report of all these items per
+branch. I need this for my inventory audit and for collection management.
+
+Can we add this?
+
+Maria
+===
+From: george.tuttle@piedmontlib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Missing and damaged items - we need a report
+Date: Thu, 16 Apr 2009 09:45:12 -0500
+
+Second this. We use the data for two purposes:
+1. Auditing - showing how many items went missing/were damaged
+2. Collection decisions - if we keep losing the same titles, maybe we need
+   different copies or to move them to a different location
+
+Do you also need the in-transit items report? I think Maria mentioned
+something about delivery issues in her interview notes.
+
+BTW, has anyone seen "The West Wing" reruns on Netflix? I'm binge-watching
+it again. Such a great show.
+===
+From: dana.peeler@ohoopeelib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Subject: Re: Missing and damaged items - we need a report
+Date: Thu, 16 Apr 2009 10:20:33 -0500
+
+Oh, we definitely need the in-transit report too. We've been losing items
+in the delivery trucks. I need to see what's been in-transit for more than
+X days (X should be configurable, probably 7 days default).
+
+And the report should merge transit-to and transit-from so front-line staff
+don't have to run two reports.
+
+My neighbor's dog barks at everything. Including my mailbox. The dog has
+issues.
+
+-Dana
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Missing and damaged items - we need a report
+Date: Thu, 16 Apr 2009 11:15:00 -0500
+
+I want the missing/damaged report to be per branch. That's crucial for
+accountability. If we see patterns (certain branches losing more items),
+we can investigate processes.
+
+Also, can the report include item condition notes? Like "water damage" or
+"vandalism"? That helps us understand root causes.
+
+Taking my mom to lunch today. She wants to try that new Italian place
+downtown. I hope it's not too noisy.
+===
+From: robert.chen@gapubliclib.org
+To: latoya.davidson@twinlakeslib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Missing and damaged items - we need a report
+Date: Thu, 16 Apr 2009 13:42:55 -0500
+
+Technical note: The system currently tracks item status as "missing" or
+"long overdue" or various other statuses. We can query for items with
+status "missing" or "lost" and group by branch.
+
+For in-transit items, we need to check the transit table for items where
+the arrival date is null and the departure date is more than X days ago.
+
+Both reports are technically feasible. The missing/damaged report can
+include date ranges (e.g., last 30 days, last quarter, etc.) which would
+be useful for trending.
+
+My garden tomatoes are finally ripening. The squirrels keep stealing them
+though. I've named one "Bandit."
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, dana.peeler@ohoopeelib.org, latoya.davidson@twinlakeslib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Missing and damaged items + in-transit
+Date: Thu, 16 Apr 2009 14:50:00 -0500
+
+Let me clarify the requirements:
+
+1. MISSING AND DAMAGED ITEMS REPORT:
+   System provides reports of missing and damaged items per branch.
+
+2. IN-TRANSIT ITEMS REPORT:
+   System generates a list of items that have been in-transit for more than
+   X days (X configurable), per branch and per system. The report merges
+   transit-to and transit-from into one report for ease of front-line staff.
+
+These are two separate but related requirements. Let's track them separately
+in our documentation.
+
+Also, for the in-transit report - can we sort by due date? Front-line staff
+need to chase the oldest items first.
+
+Watching "The Great British Baking Show" while I work. It's the most
+comforting show ever created.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Missing/damaged and in-transit reports
+Date: Fri, 17 Apr 2009 09:15:00 -0500
+
+Two requirements consolidated:
+
+1. Missing and Damaged Items Report:
+   "System provides reports of missing and damaged items per branch."
+
+2. In-transit Items Report:
+   "System generates a list of items in-transit for more than X days (X
+   configurable), per branch and per system. Report merges transit-to and
+   transit-from into one report."
+
+Both will be added to the requirements list.
+
+Robert - please confirm technical feasibility by next week.
+
+Coffee. I need coffee.
+
+-Katherine

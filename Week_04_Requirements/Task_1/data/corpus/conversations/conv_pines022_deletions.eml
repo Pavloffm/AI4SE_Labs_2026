@@ -1,0 +1,124 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Tracking deletions - who deleted what?
+Date: Fri, 24 Apr 2009 10:00:00 -0500
+
+Quick question: Is there a way to track when records are deleted? We need
+to be able to count and track record deletions (item records, patron
+records) per location and per system. This is for auditing purposes.
+
+Right now when something gets deleted, it just... disappears. No record.
+
+Maria
+===
+From: george.tuttle@piedmontlib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Tracking deletions - who deleted what?
+Date: Fri, 24 Apr 2009 10:45:33 -0500
+
+Yes, we absolutely need this. Last month our director asked for a report
+of all patron records deleted in Q1 and I had to piece it together from
+memory and email logs. Not professional.
+
+We need:
+- What type of record was deleted (item/patron/bib)
+- When it was deleted
+- Who deleted it
+- Where they were located (which branch)
+- Possibly why (status before deletion?)
+
+My neighbor just got a new puppy. It's a golden doodle named Biscuit.
+Apparently Biscuit has a taste for garden hose.
+
+-George
+===
+From: robert.chen@gapubliclib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Subject: Re: Tracking deletions - who deleted what?
+Date: Fri, 24 Apr 2009 11:30:00 -0500
+
+This is actually a good idea from an auditing standpoint. Currently,
+Evergreen does not log deletions - once something is deleted, it's gone.
+
+To implement this, we'd need:
+1. A trigger in the database that logs deletions to an audit table
+2. Fields: record_type, record_id, deleted_by, deleted_at, location
+3. A report interface to query this audit table
+
+The report should show deletions per location and per system. We can
+aggregate by date range, by user, by record type.
+
+My laptop battery is at 2%. I need to plug in before I lose this draft.
+===
+From: dana.peeler@ohoopeelib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Tracking deletions - who deleted what?
+Date: Fri, 24 Apr 2009 12:15:00 -0500
+
+I agree with George - this is about accountability. If we accidentally
+delete something we shouldn't have, we need to be able to trace it.
+
+Also, the deletion log would help with troubleshooting. "Why did this
+patron's record disappear?" - check the log.
+
+Taking my daughter to ballet class. She has a recital next week and
+is very nervous.
+
+-Dana
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, robert.chen@gapubliclib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Tracking deletions - who deleted what?
+Date: Fri, 24 Apr 2009 13:40:00 -0500
+
+From an administrative perspective, we need reports showing:
+- Total deletions per period (month, quarter, year)
+- Deletions by type (item vs patron vs other)
+- Deletions by location
+- Top users who delete the most records
+
+This helps us identify if certain branches are deleting more than others,
+which might indicate a process issue.
+
+I'm reading "Where the Crawdads Sing" right now. The marsh descriptions
+are beautiful.
+
+-Susan
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, robert.chen@gapubliclib.org, dana.peeler@ohoopeelib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Tracking deletions - who deleted what?
+Date: Fri, 24 Apr 2009 14:25:00 -0500
+
+This also helps with compliance. Some libraries need to prove they're
+handling data according to retention schedules. Being able to show
+"we deleted 500 patron records on X date" is important for audits.
+
+Can we also track attempted deletions that were denied? That would tell
+us if someone is trying to delete things they shouldn't.
+
+Trying out a new recipe for chicken tikka masala tonight. Fingers crossed.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Deletion tracking requirement
+Date: Mon, 27 Apr 2009 09:00:00 -0500
+
+Requirement consolidated:
+
+The system should count and track record deletions (e.g., item records,
+patron records) per location and per system. Tracking should include:
+- Record type
+- Timestamp
+- User who performed the deletion
+- Location of the user
+
+Additionally, tracking of denied deletion attempts would be helpful for
+compliance and troubleshooting.
+
+Robert will implement the database triggers. Katherine will draft the
+report interface requirements.
+
+Now I need to find that chicken tikka recipe...
+
+-Katherine

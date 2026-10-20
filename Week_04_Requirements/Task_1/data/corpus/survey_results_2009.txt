@@ -1,0 +1,143 @@
+================================================================================
+PINES STAFF REPORTS SURVEY - RESULTS SUMMARY
+================================================================================
+
+Survey Period: April 1 - April 20, 2009
+Survey Method: Online questionnaire distributed via PINES Connect portal
+Respondents: 142 library staff members from 58 PINES member libraries
+Response Rate: 34% (expected ~30%)
+
+--------------------------------------------------------------------------------
+SURVEY QUESTIONS AND KEY FINDINGS
+--------------------------------------------------------------------------------
+
+QUESTION 1: "How frequently do you use reports from the current Evergreen
+            system?"
+  - Daily: 42%
+  - Weekly: 28%
+  - Monthly: 18%
+  - Rarely: 9%
+  - Never: 3%
+
+QUESTION 2: "Which types of reports do you use most often? (Select all that
+            apply)"
+  - Circulation reports (checkouts, check-ins, renewals): 78%
+  - Item reports (inventory, weeding, missing): 65%
+  - Patron reports (demographics, inactive accounts): 52%
+  - Financial reports (fines, payments): 34%
+  - Hold reports (placed, filled, stale): 41%
+  - Custom/on-demand reports: 29%
+
+QUESTION 3: "What information do you need from transaction reports?"
+Open-ended responses were categorized:
+
+  Transactions can be grouped by hour, terminal, branch, and system.
+  Transactions include check-ins, check-outs, fines collected, patron
+  registrations, etc.
+
+  Specific mentions:
+  - "I need to see check-in counts broken down by method - book drop vs
+    terminal vs self-service"
+  - "Check-out types should be counted separately - staff checkout, self
+    checkout, staff renewal, self checkout renewal, online renewal, OPAC
+    renewal"
+  - "Holds reports should show how the hold was placed - at staff desk,
+    at public computer, or remotely"
+  - "Group transactions by hour to identify busy periods"
+  - "Need total transactions report - per patron, per library, per system"
+
+QUESTION 4: "What demographic analysis do you need?"
+  - Transactions by geographical regions
+  - Transactions by age ranges
+  - Patron behavior analysis (how quickly books are returned, renewal rates)
+  - Demographic statistics (must be anonymized - no personally identifiable info)
+  - "I use demographic data to plan programming. Age ranges and zip codes
+    are most useful."
+  - "We need to predict patron behavior. How likely is a book to be renewed?
+    What percent of check-outs are renewals?"
+
+QUESTION 5: "Which features are most important in a reports interface?"
+  - Ability to create report templates: 81%
+  - Fine-grained permissions (who can create/run what): 76%
+  - Ability to save and reuse queries: 73%
+  - Report queue visibility (where my report is in the queue): 68%
+  - Multiple output formats (Excel, CSV, HTML): 61%
+  - Email delivery of reports: 45%
+  - Ability to schedule recurring reports: 52%
+
+QUESTION 6: "What technical issues do you currently face?"
+Open-ended responses:
+  - "Reports take too long to run during busy hours"
+  - "I can't see if my report is still processing"
+  - "The interface is confusing - I can't find the reports I need"
+  - "I need to export to Excel but the data has too many duplicate rows"
+  - "Can't filter by some fields that should be available"
+  - "Need to pull specific MARC fields but they're spread across multiple rows"
+
+QUESTION 7: "Do you use any custom or local reports?"
+  - Yes: 38%
+  - No: 62%
+  Among those who use custom reports, the most common are:
+  - Collection development reports
+  - Program attendance tracking
+  - Staff productivity reports (time spent per transaction)
+
+QUESTION 8: "What administrative features do you need?"
+  - Query for candidate materials: 44%
+  - Save queries for repeated use: 58%
+  - Manually select from query results: 39%
+  - Change records to move items to new location: 31%
+  - Revert items to original location: 18%
+  - Count and track record deletions: 27%
+
+QUESTION 9: "What additional reports or features would you like to see?"
+Selected responses:
+  - "Historical reporting - I want to see what the data looked like on a
+    specific date in the past, even if the shelving location has changed"
+  - "Pivot table output would be great"
+  - "Real-time reporting for busy periods"
+  - "Ability to cancel a scheduled or running report"
+  - "All nulls and blank fields must be included in results"
+  - "Need a snapshot bills report going back in time"
+  - "Ability to indicate last circulation date on item reports"
+  - "Checkin date/time should not include renewals"
+
+================================================================================
+SUMMARY OF KEY REQUIREMENTS IDENTIFIED
+================================================================================
+
+1. Transaction history maintained for X days (configurable), with monthly and
+   annual aggregates retained indefinitely.
+
+2. Transactions can be grouped by hour, terminal, branch, and system.
+
+3. All types of check-in counted individually and cumulatively: book-drop,
+   terminal, by user or self-service.
+
+4. All types of check-out counted individually and cumulatively: staff checkout,
+   self checkout, staff renewal, self checkout renewal, online renewal, OPAC
+   renewal.
+
+5. Holds counted with method of placement: at staff desk, public computer,
+   or remotely.
+
+6. Transactions report can show holds placed, holds filled, and check-outs per
+   patron, per library, per group of libraries, per system, per county.
+
+7. Demographic statistics include transactions by geographical regions and age
+   ranges. Data must be anonymized.
+
+8. System produces statistics to understand/predict patron behavior and use
+   of materials.
+
+9. Report templates can be created by administrators and run as-is or modified.
+
+10. Fine-grained permissions limit who can create and clone reports.
+
+11. Shared folders to allow/disallow staff from running specific reports.
+
+12. Ability to see where your report is in the queue.
+
+Survey conducted by: Katherine Gregory, PINES Services Specialist
+Results compiled: April 25, 2009
+Report distributed to: PINES Reports Working Group

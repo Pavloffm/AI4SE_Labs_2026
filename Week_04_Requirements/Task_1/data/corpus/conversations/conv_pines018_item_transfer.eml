@@ -1,0 +1,179 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 09:00:00 -0500
+
+I need a utility for transferring batches of items between branches. We
+often need to move books to a mobile library, to an outreach program, or
+to a "just-in-time" warehouse.
+
+The utility needs:
+- Query for candidate materials
+- Save queries for repeated use
+- Manually select titles from query results
+- Change records of selected items to new location
+- Mechanisms: changing location field, generating pull lists
+- Revert items to original location after a set period of time
+
+Who else needs this?
+
+Maria
+(My neighbor's fence fell down in the storm. I loaned them my ladder.
+Good fences make good neighbors... but broken fences make good neighborly
+interactions.)
+===
+From: thomas.wright@augusta-reed.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 09:45:00 -0500
+
+We need this in cataloging all the time. We transfer items between our
+branches for collection balancing and for special programs.
+
+The "save queries for repeated use" is crucial. We do this monthly - move
+all items in genre X that haven't circulated in 6 months.
+
+Also, the "revert items to original location after a set period of time"
+is important for temporary transfers. For example, we send items to a
+book sale for 30 days, then they need to come back.
+
+Can we also revert "based on other criteria"? Like, if the item's status
+changes to "sold" at the book sale, automatically revert it?
+
+My cat has started bringing me "gifts" - namely, socks he's stolen from
+the laundry. He's very proud of himself.
+===
+From: robert.chen@gapubliclib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 10:30:00 -0500
+
+From a technical standpoint, this is doable but requires careful design.
+The key components:
+
+1. Query builder for candidate selection - we can reuse the report query
+   tool for this.
+
+2. Save/share queries - similar to report templates.
+
+3. Batch update of location field - straightforward database update with
+   transaction safety.
+
+4. Pull list generation - create a printable list of items to be moved.
+
+5. Auto-revert mechanism - a scheduled task that checks transferred items
+   and reverts them based on time or status criteria.
+
+6. Logging - track all transfers for audit purposes.
+
+One concern: with 9.6 million items, batch updates need to be efficient.
+We should process in smaller batches to avoid locking the database.
+
+My coffee maker broke this morning. Had to use the office coffee.
+Survival mode activated.
+===
+From: george.tuttle@piedmontlib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 11:15:00 -0500
+
+I like the auto-revert based on criteria. For example:
+- Revert after X days (date-based)
+- Revert when item status changes to "returned" (event-based)
+- Revert when item is checked out at the destination (event-based)
+
+The event-based reversion is tricky but very useful. We send items to
+a mobile library, and when they're checked out there, they should stay.
+But if they just sit there unused, they come back.
+
+Also, can we generate transit labels? Like, printable barcodes for the
+items being transferred?
+
+Watching "Chef's Table" again. That episode with the Danish pastry chef
+is mesmerizing.
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, robert.chen@gapubliclib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Subject: Re: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 12:00:00 -0500
+
+We need to be careful about permissions here. Not every staff member
+should be able to transfer items between branches. This should be limited
+to certain roles (managers, administrators, transfer coordinators).
+
+Also, the utility should show a preview before making changes. "If you
+run this now, 25 items will be moved from Dalton-Whitman to Mobile
+Library Unit 3. Confirm?"
+
+And we need an undo function! What if someone clicks the wrong button?
+
+My daughter's goldfish died. She's devastated. We're getting a new one
+named Bubbles II.
+===
+From: jennifer.durham@statesboro.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, robert.chen@gapubliclib.org, george.tuttle@piedmontlib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 13:30:00 -0500
+
+I also want to be able to MANUALLY SELECT from query results. Maybe I
+run a query and get 100 candidate items, but I only want to move 25 of
+them. I should be able to check boxes and select which ones to include.
+
+And can we set up alerts? If an item transfer is delayed or has issues,
+notify me.
+
+We had a power outage at the library yesterday. 30 minutes. Felt like
+being in the stone age.
+
+-Jenny
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, robert.chen@gapubliclib.org, george.tuttle@piedmontlib.org, susansexton-cooley@saraboblib.org, jennifer.durham@statesboro.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Moving items between branches - utility needed
+Date: Mon, 11 May 2009 14:15:00 -0500
+
+Can we track transfer history? Like, "this item has been transferred 5
+times in the past year." That might indicate a problem with the item
+being in the wrong location.
+
+Also, for the outreach program use case - can we transfer items to a
+temporary location for a specific event or program? Like, move 20 biographies
+to the community center for their genealogy workshop, then revert them
+after the event.
+
+My mom bought a new vacuum cleaner. It's so powerful it picked up our
+cat's tail. He ran around the house like a tumbleweed.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Item transfer utility requirement
+Date: Tue, 12 May 2009 09:00:00 -0500
+
+Major requirement consolidated:
+
+The system should provide a utility for transferring batches of items
+between branches. This includes:
+
+- Ability to query for candidate materials
+- Ability to save queries for repeated use
+- Ability to manually select titles from query results
+- Ability to change records of selected items to move to new location
+- Mechanisms: changing location field, generating pull lists
+- Ability to revert items to original location after a set period of time
+  and/or based on other criteria
+
+Additional features requested:
+- Preview before making changes
+- Undo function
+- Permission control (limited to managers/admins)
+- Transfer history tracking
+- Event-based and time-based auto-revert
+- Printable transit labels
+- Transfer delay alerts
+
+Action: Robert will investigate technical constraints. Thomas will
+coordinate testing with cataloging staff.
+
+-Katherine
+(P.S. Bubbles II will be fine, Susan. Goldfish have a 3-second memory.
+...Wait, that's a myth. They actually remember things for months.)

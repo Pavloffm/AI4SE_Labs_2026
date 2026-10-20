@@ -1,0 +1,154 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Inactive patrons report needed
+Date: Tue, 05 May 2009 08:45:00 -0500
+
+We need a report that shows patrons with no circulation or electronic
+activity in the last X days. X should be configurable - we usually use 365
+days but it would be nice to adjust.
+
+The list should be configurable to different levels - System, Home Library,
+County, etc.
+
+Who else needs this?
+
+Maria
+(Also, anyone have a good eye cream recommendation? I'm starting to see
+fine lines and it's freaking me out.)
+===
+From: george.tuttle@piedmontlib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Inactive patrons report needed
+Date: Tue, 05 May 2009 09:20:00 -0500
+
+This is huge for us. We run this quarterly to clean up our patron database.
+Inactive records bloat the database and slow things down.
+
+For the configurable levels - I'd want System and Home Library. At the
+system level, I can see which branches have the most inactive patrons.
+At the home library level, I can assign cleanup tasks to specific branches.
+
+Can we also include "electronic activity"? That means online account
+access, not just physical checkouts. Some patrons use the OPAC but don't
+check out physical items anymore.
+
+My son just got accepted to Georgia Tech. I'm so proud!
+===
+From: dana.peeler@ohoopeelib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Subject: Re: Inactive patrons report needed
+Date: Tue, 05 May 2009 10:15:00 -0500
+
+We use this for outreach - trying to re-engage patrons who haven't visited
+in a while. We mail postcards to inactive patrons, so the report needs to
+include current mailing addresses.
+
+What counts as "electronic activity"? Is it just logging into the OPAC?
+Or also accessing digital resources (OverDrive, etc.)?
+
+Also, should we flag patrons who are inactive but still owe fines? We
+should probably handle those differently.
+
+My daughter's first piano recital is this weekend. She's been practicing
+Chopin for months. I'm nervous just watching her practice.
+
+-Dana
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodeguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Inactive patrons report needed (note typo correction)
+Date: Tue, 05 May 2009 10:45:00 -0500
+
+Dana raises a good point about what counts as activity. Let me clarify:
+
+"Electronic activity" should include:
+1. Logging into OPAC/patron account
+2. Placing holds online
+3. Renewing items online
+4. Accessing digital collections (if integrated)
+
+And yes, we should track inactive patrons who still owe fines separately.
+Those accounts need different handling.
+
+For the configurable X days - what ranges make sense?
+- 30 days (monthly check)
+- 90 days (quarterly check)
+- 180 days (semi-annual)
+- 365 days (annual)
+
+Can we make it fully customizable? Like any number of days?
+
+I just realized I've been pronouncing "espresso" wrong my whole life.
+I've been saying "expresso." Mind blown.
+===
+From: robert.chen@gapubliclib.org
+To: susansexton-cooley@saraboblib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Inactive patrons report needed
+Date: Tue, 05 May 2009 11:30:00 -0500
+
+Technically, this is straightforward. We query the transaction table for
+the most recent activity per patron, and filter for those whose last
+activity is more than X days ago.
+
+For "electronic activity," we track:
+- OPAC login events
+- Online hold placements
+- Online renewals
+- Digital resource access (if logged)
+
+These are stored in different tables, so we'd need a combined query.
+
+For the configurable levels - System, Home Library, County - that's just
+GROUP BY clauses. Easy.
+
+One performance note: for 3.5 million patrons, this query could be slow.
+We should run it as a background report and cache results.
+
+The power went out for 2 hours this morning. I had to work on my laptop
+on battery. Very slow going.
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, dana.peeler@ohoopeelib.org, susansexton-cooley@saraboblib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Inactive patrons report needed
+Date: Tue, 05 May 2009 12:00:00 -0500
+
+One more thing - we should be able to EXCLUDE certain patrons from the
+inactive report. For example:
+- Patrons with "do not disturb" flags
+- VIP patrons
+- Staff members
+- Patrons who have opted out of communications
+
+Also, the report should be exportable. We upload it to our outreach system.
+
+My garden is finally blooming. The peonies are enormous this year.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Inactive patrons report requirement
+Date: Wed, 06 May 2009 09:15:00 -0500
+
+Requirement consolidated:
+
+The system should generate a list of patrons with no circulation or
+electronic activity in the last X days (X configurable). Electronic activity
+includes OPAC login, online hold placement, online renewals.
+
+The list should be configurable to:
+- System
+- Home Library
+- County
+- (Other levels as needed)
+
+Additional considerations:
+- Include current mailing addresses for outreach
+- Track inactive patrons with outstanding fines separately
+- Allow exclusion of certain patron types
+- Exportable format (CSV)
+- Background processing for performance
+
+Action: Robert will optimize the query. Susan and Dana will provide test
+scenarios for outreach.
+
+-Katherine
+(P.S. "Italian" is "ee-tal-EE-an." You're welcome, Susan.)

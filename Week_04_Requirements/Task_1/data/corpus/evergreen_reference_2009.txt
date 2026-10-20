@@ -1,0 +1,228 @@
+================================================================================
+EVERGREEN ILS - REPORTING MODULE OVERVIEW
+================================================================================
+Reference Document
+Version: 1.4.0.4
+Date: March 15, 2009
+Source: Evergreen Official Documentation & PINES IT Department Analysis
+
+================================================================================
+1. SYSTEM OVERVIEW
+================================================================================
+
+Evergreen is an open-source Integrated Library System (ILS) originally
+developed by the Georgia Public Library Service for use in PINES. The current
+version in production at PINES is 1.4.0.4.
+
+This document provides an overview of the existing reporting capabilities
+within Evergreen, along with identified gaps and limitations that have driven
+the need for enhanced Management Processes reporting.
+
+PINES currently operates Evergreen across 286 library locations, serving
+approximately 3.5 million patrons with a collection of 9.6 million items.
+
+================================================================================
+2. EXISTING REPORTING COMPONENTS
+================================================================================
+
+2.1 REPORT WRITER INTERFACE
+Evergreen includes a report writer that allows staff to create custom reports
+using a web-based interface. Key features:
+
+- Drag-and-drop field selection
+- Basic filtering and sorting
+- Multiple output formats (CSV, HTML, sometimes Excel)
+- Ability to save and reuse report definitions
+
+Limitations:
+- Complex queries are difficult to construct
+- No Boolean operators (AND/OR) beyond simple filters
+- Limited field selection (not all database fields are available)
+- No regular expression support
+- No query queue visibility
+
+2.2 CANNED REPORTS
+Pre-defined reports available in Evergreen 1.4.0.4:
+
+CIRCULATION:
+- Checkout Count
+- Renewals Count
+- Non-Cataloged Count
+- Circulation Count by Shelving Location
+
+ITEMS:
+- Items Added Count
+- Items Deleted Count
+- Items Currently Checked Out
+- Items Overdue by X Days
+- List of Items with Missing Status
+
+BIB RECORDS:
+- Bib Records Count
+- Bib Records with No Volumes Attached
+
+PATRONS:
+- Patron Count
+- Patron Count by Home Library
+
+BILLS:
+- Bills Currently Owed by Patrons
+- Detailed Payments Received
+- Aged Debt
+
+2.3 REPORT SCHEDULING
+Some reports can be scheduled to run at regular intervals (daily, weekly,
+monthly). However, scheduling options are limited:
+
+- No hourly scheduling
+- No ability to check multiple reports to run at the same time
+- No email delivery (reports can only be downloaded from the web interface)
+
+2.4 PERMISSIONS
+Current permission model:
+- Staff can run any report they can access
+- No fine-grained control over who can create vs. run reports
+- No shared folders concept
+- No ability to limit which filters staff can use
+
+================================================================================
+3. REPORTABLE DATA STRUCTURES
+================================================================================
+
+3.1 RECORD TYPES
+The following record types are available for reporting:
+
+- bibliographic_record: Title, author, ISBN, publication info, subjects, etc.
+- item: Call number, barcode, location (copy location), status, etc.
+- patron: Name, address, library, patron type, etc.
+- action_circulation: Checkout, checkout, renewal, holds, etc.
+- action_hold: Hold requests
+- money: Fines, payments, credits, etc.
+- actor: Staff accounts and permissions
+
+3.2 KEY RELATIONSHIPS
+- bibliographic_record -> item (through asset.copy)
+- item -> action.circulation (through circulation transactions)
+- patron -> action.circulation (through patron_id)
+- patron -> money (through debt records)
+- actor -> action.circulation (through librarian link)
+
+3.3 AVAILABLE FIELDS (SAMPLE)
+For bibliographic_record:
+- id, fingerprint, scan_timestamp, record_type,
+  edition, language, ISBN, ISSN, UPC, EAN, publisher_name,
+  publication_date, place_of_publication, physical_description
+
+For item:
+- id, barcode, label, copy_number, location (copy_location),
+  status (acq status), circ_modifier, call_number,
+  purchase_date, purchase_price, shelving_location,
+  age_hold_protect, reserve_id
+
+For patron:
+- id, barcode, opac (visible fields), family_lib (home library),
+  usr_grp (patron type), em (email),
+  address lines, city, state, zip (postal code),
+  birth_date, create_date
+
+================================================================================
+4. IDENTIFIED GAPS AND LIMITATIONS
+================================================================================
+
+The following reporting capabilities are MISSING from Evergreen 1.4.0.4 or
+are severely limited:
+
+4.1 MISSING REPORT TYPES
+- Circulation Count by Circ Modifier (partially available)
+- Circulation Count by Dewey (not available)
+- Circulation Count by MARC fields (not available)
+- Circulation Count by Circ Location broken down by Patron County (not available)
+- Circulation Count by Age Demographic (not available)
+- Items Edited Count (not available)
+- List of Items by Fines Stopped Reason (not available)
+- Items more than XX days overdue with patron contact info (not available)
+- List of Items with specific Total Use Count (not available)
+- Last Copy Report (partially available, needs enhancement)
+- List of Items by Creation Date Range (not available)
+- Claims Returned report (not available)
+- Weeding report with date of last circulation (partially available)
+- Age of collection by call number (not available)
+- Price value of collection by call number (not available)
+- Bib Records Edited Count (not available)
+- Bib Records Added by user by library Count (not available)
+- Bib Records missing specific MARC fields (not available)
+- Patron Count by Age Demographic (not available)
+- Patron Count by County (not available)
+- Patron Count by County, City, & Zip Code (not available)
+- Voter Survey Responses (not available)
+- List of Patrons with inactive status (not available)
+- Staff Accounts with date of last password change (not available)
+- Holds Purchase Alert (not available)
+- Unfilled Holds (not available)
+- Stale Holds (not available)
+- Aged Debt detailed report (partially available, needs enhancement)
+
+4.2 MISSING FEATURES
+- No report queue visibility (staff can't see where their report is in queue)
+- No ability to prioritize certain types of reports
+- No ability to cancel a running report
+- No pivot table output
+- No real-time reporting (all reports are run on current data)
+- No historical reporting warehouse
+- No ability to select Run ASAP, Hourly, Daily, Weekly, Monthly, Yearly
+- No email delivery of reports
+- No address book for report delivery
+- No ability to upload text files for filtering (barcodes, TCNs)
+- No selection criteria display in report results
+- No ability to edit canned report display options
+- No quick access interface with pop-up descriptions
+- No hover tooltips for report titles
+
+4.3 MISSING ARCHITECTURAL ELEMENTS
+- No separate reporting database/replica (reports run on production database)
+- No background processing for long-running reports
+- No report template management system
+- No fine-grained permissions for reports
+- No development/training environment separation
+- No configuration migration between environments
+- No accessibility support for report interface
+- No online help system integrated with reports
+
+4.4 FINE-GRAINED REQUIREMENTS NOT MET
+Several fine-grained reporting requirements from the King County specification
+are not met by Evergreen 1.4.0.4:
+
+- Three interfaces (canned, on-demand, open template) - only basic canned exists
+- Open Template Reporting - does not exist
+- Real time reporting - does not exist
+- Historical reporting warehouse - does not exist
+- Snapshot bills report going back in time - does not exist
+- Last edit date not including last circulation - does not exist
+- Ability to indicate last circulation date - not available as separate field
+- Checkin Date/time not including renewals - checkin and renewal timestamps
+  are stored together
+- All nulls and blank fields included in results - current system may filter
+  some nulls
+
+================================================================================
+5. CONCLUSION
+================================================================================
+
+Evergreen 1.4.0.4 provides basic reporting capabilities but has significant
+gaps in several areas. The management processes reporting system needs to:
+
+1. Expand the available report types to cover all identified gaps
+2. Implement fine-grained permissions and template management
+3. Add report queue visibility and status indicators
+4. Provide multiple output formats and scheduling options
+5. Implement accessibility compliance
+6. Separate reporting from production operations
+7. Provide a development/training environment with migration capability
+
+This analysis was conducted by the PINES IT Department and is based on
+review of the Evergreen codebase version 1.4.0.4 and production usage patterns
+observed in the PINES environment.
+
+================================================================================
+END OF DOCUMENT
+================================================================================

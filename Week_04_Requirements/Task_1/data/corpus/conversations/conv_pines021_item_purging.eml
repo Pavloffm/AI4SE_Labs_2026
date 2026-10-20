@@ -1,0 +1,149 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Weeding reports - item purging needs
+Date: Tue, 21 Apr 2009 08:30:00 -0500
+
+Hi all,
+
+We're doing our annual weeding and I need better reporting. Specifically:
+
+1. I need to identify item records to purge based on customizable criteria.
+   For example:
+   - Item has been in status "missing" for more than X months
+   - Item has status "discard/weed"
+
+2. I need a report to help convert items from one status to another in batch.
+   Like changing 100 items from "missing" to "discard/weed" at once.
+
+3. CRITICAL: We need a "last copy report" that identifies our library
+   system's last copies. This helps catalogers update WorldCat entries
+   so we don't accidentally delete the only copy in the consortium.
+
+4. We also need a quick way to delete volume entries along with copy
+   entries, and delete records with no items attached.
+
+Who else needs this?
+
+Maria
+(Also, does anyone know if Costco is open on Sundays? Need to buy snacks
+for staff meeting.)
+===
+From: thomas.wright@augusta-reed.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Weeding reports - item purging needs
+Date: Tue, 21 Apr 2009 09:15:00 -0500
+
+Maria, this is exactly what we need in cataloging. We're constantly
+cleaning up the database - removing orphaned records, converting statuses,
+identifying last copies before deletion.
+
+For the last copy report - is this per library or per system? I think
+we need both views. Sometimes we delete the last copy at our branch,
+sometimes the last copy in the entire PINES system.
+
+I just finished reading "The Seven Husbands of Evelyn Hugo" and I'm not
+ready to talk about anything else. That book wrecked me. In a good way.
+===
+From: jennifer.durham@statesboro.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Weeding reports - item purging needs
+Date: Tue, 21 Apr 2009 10:00:22 -0500
+
+This is huge for our collection management workflow. The batch status
+conversion alone would save us hours of manual work.
+
+For the purging criteria - can we make them really customizable? Like,
+I might want to purge items:
+- That haven't circulated in 5+ years
+- With status "missing" for 2+ years
+- That are damaged AND haven't circulated in 2+ years
+
+The system should let us combine criteria.
+
+My sister just texted me that she's engaged. I'm so excited!
+===
+From: robert.chen@gapubliclib.org
+To: jennifer.durham@statesboro.lib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Weeding reports - item purging needs
+Date: Tue, 21 Apr 2009 11:30:45 -0500
+
+From a technical standpoint, we need to be careful here. "Customizable
+criteria" is great, but we need to make sure the system is safe - we
+don't want someone accidentally deleting their entire collection.
+
+I'm thinking:
+1. Reports show candidates for purging (read-only)
+2. A separate confirmation step for actual deletions
+3. Audit trail for all purges
+
+For the last copy report, the system would check: for each item record,
+is this the only copy in the specified scope (library or system)? If yes,
+flag it.
+
+Also, "quick effective method of deleting volume entries along with copy
+entries, as well as records with no items attached" - this is more of a
+cleanup utility. Should it be automated or manual?
+
+Going to see "Endgame" tonight. Anyone else plan to?
+===
+From: dana.peeler@ohoopeelib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, jennifer.durham@statesboro.lib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Weeding reports - item purging needs
+Date: Tue, 21 Apr 2009 12:15:00 -0500
+
+I want the customizable criteria for purging to include:
+- Status-based criteria (missing, discard/weed, damaged)
+- Time-based criteria (in status for X months/years)
+- Activity-based criteria (last circulated X days/months/years ago)
+
+Can we combine these? Like "items with status 'missing' for more than 6
+months AND haven't circulated in 2 years"?
+
+Also, for safety - YES on the audit trail. We need to track who purged what
+and when. This is for accountability and troubleshooting.
+
+My dog ate my library card. I have no idea how.
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, jennifer.durham@statesboro.lib.org, robert.chen@gapubliclib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Weeding reports - item purging needs
+Date: Tue, 21 Apr 2009 13:45:00 -0500
+
+This is all great. One more thing - the "last copy report" should definitely
+be available per system, not just per library. We need to make sure no one
+accidentally deletes the last copy at the consortium level.
+
+Also wondering - can the purging utility be scheduled? Like, run automatically
+at the end of each year?
+
+Took my kids to the zoo yesterday. The penguins were very active.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Item record purging requirement
+Date: Wed, 22 Apr 2009 09:00:00 -0500
+
+Summarizing the item record purging requirements:
+
+The system should provide a utility and reports for identifying item records
+to purge, based on customizable criteria such as:
+- An item has been in status "missing" for more than X months
+- An item has status "discard/weed"
+
+The system should:
+- Provide a report to assist in the conversion of items from one status to
+  another
+- Provide a last copy report singling out a library system's last copies,
+  to assist catalogers who need to edit WorldCat entries
+- Provide a quick effective method for deleting volume entries along with
+  copy entries, as well as records with no items attached
+
+Safety measures:
+- Read-only reports for identifying candidates
+- Separate confirmation step for actual deletions
+- Audit trail for all purges
+
+Action: Thomas and Maria will test this during weeding season.
+
+-Katherine
+(P.S. Costco is open Sunday. Confirmed.)

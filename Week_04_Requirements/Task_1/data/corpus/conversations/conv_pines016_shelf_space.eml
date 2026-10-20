@@ -1,0 +1,119 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Shelf space vs. usage - help needed
+Date: Mon, 13 Apr 2009 10:15:00 -0500
+
+Question for the group: How do I figure out if I'm using my shelf space
+efficiently? I need something that shows me, for each genre and format:
+- What percentage of total circulations it has
+- What percentage of the collection it is
+- What percentage of total shelf space it occupies
+
+Does anyone else need this?
+
+Maria
+P.S. Does anyone know if the new Marvel movie is any good?
+===
+From: thomas.wright@augusta-reed.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Shelf space vs. usage - help needed
+Date: Mon, 13 Apr 2009 11:02:33 -0500
+
+YES, I need this too. As a cataloger, I'm always trying to convince our
+director to reallocate space from low-circulation genres to high-circulation
+ones. Having actual data would be game-changing.
+
+Currently I pull reports manually and make spreadsheets. It's tedious.
+
+My kid is obsessed with dinosaur books right now. I'm reading "The Rise and
+Fall of the Dinosaurs" at bedtime. Apparently T-Rex could bite through a
+car. Fascinating bedtime reading.
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Shelf space vs. usage - help needed
+Date: Mon, 13 Apr 2009 11:45:07 -0500
+
+This is the "shelf space report" we've been talking about. The idea is:
+for each genre and format of material, compare:
+1. Percentage of total circulations
+2. Percentage of the collection
+3. Percentage of total shelf space
+
+The report should be able to run per library and per system. This way branch
+managers can see their local situation AND see how they compare to the system
+average.
+
+I just got back from the farmer's market. Got some amazing heirloom tomatoes.
+Anyone tried making a tomato sandwich with just basil, salt, and bread?
+Heaven on earth.
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Shelf space vs. usage - help needed
+Date: Mon, 13 Apr 2009 12:30:55 -0500
+
+I would need this at the system level for sure. When I look at Twin Lakes
+as a whole, we might have too many romance novels in some branches and not
+enough in others. Being able to redistribute based on data would help.
+
+Can we also filter by date range? Like, what was the shelf space utilization
+in Q1 vs. Q2? Seasons matter for our collection.
+
+Also, my cat Mittens keeps knocking plants off my windowsill. I've moved the
+plants but he finds new ones to knock over. Cats are ridiculous.
+===
+From: robert.chen@gapubliclib.org
+To: latoya.davidson@twinlakeslib.org, pines-reports-working-group@gapl.org
+Subject: Re: Shelf space vs. usage - help needed
+Date: Mon, 13 Apr 2009 14:10:22 -0500
+
+From a data perspective, we need to:
+1. Count items per genre/format (this is the "percentage of collection")
+2. Sum checkouts per genre/format (this is the "percentage of circulations")
+3. Estimate shelf space per genre/format (this is the "percentage of shelf space")
+
+The tricky part is #3. Shelf space isn't directly tracked in the database.
+We'd need to estimate based on item dimensions or use item count as a proxy.
+
+We can also add the per-library and per-system breakdown. That's just
+adding GROUP BY clauses to the right levels.
+
+Going to try that pesto recipe I found. Using the basil from my garden.
+===
+From: jennifer.durham@statesboro.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, thomas.wright@augusta-reed.lib.org, susansexton-cooley@saraboblib.org, latoya.davidson@twinlakeslib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Shelf space vs. usage - help needed
+Date: Mon, 13 Apr 2009 15:20:00 -0500
+
+I want this broken down per library AND per system. Our directors review
+this data quarterly and need both views.
+
+Also, can we include a "comparison" view that shows each library's breakdown
+side by side? That would make it easy to spot outliers.
+
+My sister is visiting from Atlanta this weekend. She's been begging me to
+take her to Callaway Gardens. I haven't been since I was a kid.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Shelf space report requirement
+Date: Tue, 14 Apr 2009 08:30:00 -0500
+
+Great discussion everyone. Summarizing the Shelf Space Report requirement:
+
+The system should provide, for each genre and format of material, the ability
+to compare:
+- The percentage of total circulations
+- The percentage of the collection
+- The percentage of total shelf space
+
+The report should be available per library and per system.
+
+Action items:
+- Robert will investigate how to estimate shelf space from existing data
+- Susan will coordinate with branch managers for testing
+
+I need to buy new running shoes. These old ones are falling apart.
+
+-Katherine

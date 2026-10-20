@@ -1,0 +1,678 @@
+================================================================================
+DRAFT SOFTWARE REQUIREMENTS SPECIFICATION
+
+FOR THE MANAGEMENT PROCESSES
+OF AN
+INTEGRATED LIBRARY SYSTEM
+
+================================================================================
+
+Prepared by:
+Lori Ayre & Lucien Kress
+Galecia Group
+Consulting for Libraries and Cultural Heritage Organizations
+
+Version: 1.0 DRAFT (for review)
+Date: January 27, 2009
+Status: Internal Draft - Circulating for Comment
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+1. Executive Summary
+2. Product Perspective
+3. User Characteristics
+4. Operating Environment Requirements
+5. Design and Implementation Constraints
+6. User Documentation Requirements
+7. Assumptions and Dependencies
+8. Functional Requirements - General Management Tools
+9. Functional Requirements - Demographics
+10. Functional Requirements - Inventory Control
+11. Functional Requirements - Patron Records
+12. Functional Requirements - Transaction Records
+13. Functional Requirements - Financial Records
+14. Appendices - Report Types
+15. Fine-Grained Reporting Requirements
+
+================================================================================
+1. EXECUTIVE SUMMARY
+================================================================================
+
+This document presents a draft set of requirements for the management and
+reporting processes of an Integrated Library System (ILS). These requirements
+were developed for King County Library System (KCLS) in Washington State but
+are believed to be applicable to many large, urban, multiple-branch,
+centralized library systems.
+
+The purpose of this document is to provide a comprehensive set of requirements
+that can guide the development of reporting and management tools within an ILS.
+The requirements cover functional aspects only; data structures and user
+interfaces will require further specification and development using an
+iterative, prototype-oriented methodology.
+
+King County serves over 2.3 million residents across 49 libraries with an
+annual circulation of approximately 8 million items. The system maintains
+over 4 million bibliographic records and serves over 650,000 active borrower
+accounts.
+
+NOTE: This is a DRAFT document. Requirements are subject to change based on
+feedback from stakeholders and additional analysis. Items marked [*] are
+considered high priority by KCLS but may need adjustment for other systems.
+
+================================================================================
+2. PRODUCT PERSPECTIVE
+================================================================================
+
+The Management Processes component of an ILS provides the tools needed for
+library administrators, managers, and staff to analyze operations, manage
+collections, and make data-driven decisions. This component operates as part
+of a larger enterprise-level Library Automation System.
+
+The Management Processes are consolidated at a central location and accept
+input from and provide services to multiple library locations. They rely on
+the data structures and functionality of the broader ILS, including Acquisitions
+and Cataloging modules.
+
+The current specification presupposes the general functionality of an ILS and
+specifies only those requirements that directly or indirectly relate to
+management activities. While the requirements were developed specifically for
+King County, they are expected to be suitable for many similar library systems.
+
+The Management Processes facilitate the management of Library services,
+programs, and policies. Specifically, the Management Processes support:
+
+  - Analyzing the Library collection and its use by patrons.
+  - Analyzing branch capacity and optimal distribution of the collection.
+  - Analyzing the demographics and interests of patrons.
+  - Analyzing staff productivity and workflow.
+  - Tracking and verifying financial transactions.
+
+================================================================================
+3. USER CHARACTERISTICS
+================================================================================
+
+The following user types have been identified:
+
+* Patron: A person utilizing the resources of a library, either as a member
+  of the public with a library card or as a member of the public without a
+  card. Patrons may interact with the system through the OPAC.
+
+* Staff: Employees of the library system who are involved in designing and
+  providing services to the public. This includes circulation staff, reference
+  staff, and specialized staff.
+
+* Local System Administrators: Individuals (typically library managers) who
+  oversee library processes and have elevated permissions within the system.
+  They can configure local settings and run system reports.
+
+* Library Managers: Individuals who supervise organizational units and provide
+  input to the design and implementation of library services. They use reports
+  for planning and evaluation.
+
+* Library Administrators: Senior leadership who plan and direct library services
+  and priorities. They require aggregated, high-level reports for strategic
+  planning and board presentations.
+
+* Global System Administrator: The individual(s) who manage the ILS at the
+  consortium level, implementing software changes and configurations, and
+  generating statistical reports for the entire system.
+
+================================================================================
+4. OPERATING ENVIRONMENT REQUIREMENTS
+================================================================================
+
+OE-1: The system must support a library consortium with 286 locations, 17 million
+      annual circulations, and purchasing/processing over 900,000 items per year.
+      It is highly desirable that searches and reports can be processed during
+      open hours without disrupting other system functions.
+      [* High Priority]
+
+OE-2: The system must operate on a Linux or Solaris server environment.
+      [* High Priority]
+
+OE-3: The system must be accessible through a web browser or a Windows-compatible
+      client.
+      [* High Priority]
+
+OE-4: If web-browser based, the system must be accessible through Microsoft
+      Internet Explorer (version 6.0 and later) and Mozilla Firefox (version
+      2.0 and later).
+      [* Medium Priority]
+
+OE-5: The system must be accessible with screen-reading software, screen-
+      magnification software, and other assistive technology programs designed
+      to increase accessibility.
+      [* High Priority]
+
+================================================================================
+5. DESIGN AND IMPLEMENTATION CONSTRAINTS
+================================================================================
+
+CO-1: The system must use a fully relational database back-end. [* High Priority]
+
+CO-2: The system must produce standards-compliant HTML output for web-based
+      components.
+      [* High Priority]
+
+CO-3: The system must provide a development and training environment with the
+      ability to migrate configurations to a production environment.
+      [* Medium Priority]
+
+CO-4: User rights and privileges will be controlled through security groups and
+      or "roles" that allow access control for individuals, workgroups, and
+      arbitrary staff groups.
+      [* High Priority]
+
+CO-5: These requirements must not constrain functionality or features of the
+      Online Public Access Catalog (OPAC) module.
+      [* High Priority]
+
+================================================================================
+6. USER DOCUMENTATION REQUIREMENTS
+================================================================================
+
+UD-1: The developer must provide complete data specifications for authority
+      records, bibliographic records, order records, item records, hold/request
+      records, and other records maintained or accessed by the Management
+      Processes.
+      [* High Priority]
+
+UD-2: The developer must provide a thorough high-level description of major
+      processes, including bibliographic record import and export, validation
+      of bibliographic records against internal and external authority sources,
+      and standard reports.
+      [* Medium Priority]
+
+UD-3: The system must provide an online, hierarchical, and cross-linked help
+      system in HTML that describes and illustrates all system functions.
+      [* High Priority]
+
+UD-4: The system must provide thorough high-level error reporting and feedback,
+      and shall allow low-level query-specific feedback for Local and Global
+      System Administrators from the front-end interface.
+      [* Medium Priority]
+
+================================================================================
+7. ASSUMPTIONS AND DEPENDENCIES
+================================================================================
+
+AS-1: Management Processes are part of an enterprise-level Library Automation
+      System.
+
+DE-1: Management Processes rely on the data structures and functionality of an
+      enterprise-level Library Automation System, including Acquisitions and
+      Cataloging modules.
+
+AS-2: Management Processes are consolidated at a central location, and accept
+      input and provide services to multiple locations.
+
+DE-2: Management Processes interface with a variety of vendor websites, via
+      published APIs and/or automated transfer of standard-format data files
+      (e.g., USMARC21, EDIFACT).
+
+DE-3: Management Processes interact with a patron interface, also known as an
+      Online Public Access Catalog (OPAC).
+
+================================================================================
+8. FUNCTIONAL REQUIREMENTS - GENERAL MANAGEMENT TOOLS
+================================================================================
+
+[*] = High Priority item
+
+8.1 Staff Login
+The system should support streamlined methods of logging into terminals. For
+example, a staff member could swipe a card (like an RFID employee badge) to
+log in, or alternatively use individual login credentials (username and
+password). The system should not REQUIRE card-based login - traditional
+username/password should also be available as a fallback.
+
+8.2 Report Templates
+System administrators should be able to create report templates that are
+available to staff. These templates should be runnable as-is or modifiable
+for individual needs. Changes to templates should not compromise the accuracy
+of results. Administrators should be able to limit which filters and display
+fields can be altered, to certify a dependable output.
+
+For example, front-line staff could set a call number range for a weeding
+report or add/remove display fields from a pick list, but they should not be
+able to alter the template to display deleted items.
+
+8.3 Report Permissions
+The system should provide distinct, fine-grained permission levels that limit
+who can create and clone reports. All permissions should be easy to administer.
+System administrators should be able to create shared folders to allow or
+disallow staff from running specific reports, and/or to run ad hoc reports on
+specific sets of data.
+
+8.4 Query Tool
+The system should provide a user-friendly interface for designing queries
+against all record types (bibliographic, item, patron, transaction, financial).
+Staff should be able to:
+  - Select fields to query
+  - Select values from a picklist of possible values
+  - Select regular expressions from a drop-down menu
+  - Use a full range of Boolean operators
+
+Administrators should control staff access to tables and fields.
+
+8.5 Board Reports / Executive Reports
+The system should provide pre-defined reports for consumption by library boards
+and other external consumers. These should include basic statistics like those
+required by the Georgia Annual Report and Application for State Aid.
+
+Activity reports should indicate traffic and volume of use, displaying
+statistics on check-outs, check-ins, holds placed, and holds filled. It
+should be possible to cross-tabulate per terminal, per branch, per library
+system, per hour, per patron age range, per patron type, and per patron
+location.
+
+8.6 Transaction Data Archiving
+Transactions should be archived in a form that protects patron privacy as
+defined by State Law, while providing useful demographic statistics.
+
+8.7 Periodic Report Examples
+Examples of periodic reports include:
+  - Bibliographic records with holds
+  - Items that have not been checked out in X days
+  - Item-level holds
+  - Items with invalid item type
+  - In-transit items with outstanding hold
+  - Items that have been in-transit for more than X days
+  - Items that are the last copy in the system
+  - Items with a long call number
+  - Missing items
+  - Bibliographic records with no item records
+  - Patrons with invalid home library
+
+8.8 Query Selections Display
+The system should provide the query selections along with the results, so users
+can see what criteria were used to generate the report.
+
+8.9 Report Queue
+Staff should be able to see where their report is in the queue of reports
+waiting to run.
+
+8.10 Canned Report Examples
+The system must be able to support the reporting definitions as described in
+the attached report examples (see Appendix A).
+
+8.11 Fine-Grained Reporting Requirements
+The system must be able to support the fine-grained reports requirements as
+described in the attached specification (see Appendix B).
+
+================================================================================
+9. FUNCTIONAL REQUIREMENTS - DEMOGRAPHICS
+================================================================================
+
+9.1 Patron Behavior and Use Analysis
+The system should produce statistics that can be used to understand and predict
+patron behavior and use of materials. For example:
+  - How quickly is a particular book returned, on average?
+  - How likely is a particular book to be renewed?
+  - What percent of check-outs at a particular branch are renewals?
+
+9.2 Demographic Statistics
+The system should produce useful demographic statistics, including transactions
+by geographical regions, age ranges, etc. The data used to produce these
+statistics must be anonymized - information that could be used to identify a
+patron is deleted.
+
+================================================================================
+10. FUNCTIONAL REQUIREMENTS - INVENTORY CONTROL
+================================================================================
+
+10.1 Material Volume Report
+Ability to report on the volume of material in a given library at any point in
+time, based on new acquisitions, items on the shelf, and items out in
+circulation. The report should allow breaking down volume in categories such
+as: total items in library, number of holds, number of adult fiction, number
+of board books, etc.
+
+10.2 System Capacity Interface
+The system should provide an interface showing the capacity of all branches.
+
+10.3 Shelf Space Report
+For each genre and format of material, ability to compare:
+  - The percentage of total circulations
+  - The percentage of the collection
+  - The percentage of total shelf space
+
+The report should be able to run per library and per system.
+
+10.4 Uncataloged Material
+Ability to control inventory of uncataloged material, such as paperback books
+and children's board books. Support needed for:
+  - Quick distribution
+  - Minimal branch labor
+  - Ability to identify how the material is being used
+
+Ability to count transactions and include in circulation statistics and
+reports.
+
+10.5 Item Transfer Utility
+System should provide a utility for transferring batches of items between
+branches. Uses include: moving books into a mobile library, an outreach program
+collection, or a "just-in-time" warehouse.
+
+The utility should include:
+  - Ability to query for candidate materials
+  - Ability to save queries for repeated use
+  - Ability to manually select titles from query results
+  - Ability to change records of selected items to move to new location
+  - Mechanisms for moving items: changing location field, generating pull lists
+  - Ability to revert items to original location after a set period of time
+
+10.6 Missing and Damaged Items Report
+The system should provide reports of missing and damaged items per branch.
+
+10.7 In-Transit Items Report
+The system should generate a list of items that have been in-transit for more
+than X days (X configurable), per branch and per system. The report should
+merge the transit-to and transit-from into one report for ease of front-line
+staff use.
+
+10.8 Item Record Purging
+The system should provide a utility and reports for identifying item records
+to purge, based on customizable criteria such as:
+  - An item has been in status "missing" for more than X months
+  - An item has status "discard/weed"
+
+The system should have a report to assist in the conversion of items from one
+status to another. The system should provide a last copy report that singles
+out a library system's last copies, to assist catalogers who need to edit
+WorldCat entries. The system should provide a quick effective method of
+deleting volume entries along with copy entries, as well as records with no
+items attached.
+
+10.9 Deletions Tracking
+Ability to count and track record deletions (e.g., item records, patron records)
+per location and per system.
+
+================================================================================
+11. FUNCTIONAL REQUIREMENTS - PATRON RECORDS
+================================================================================
+
+11.1 Patron Characteristics
+Queries and reports can be limited or grouped by various patron characteristics,
+including:
+  - age range
+  - zip code
+  - county of residence
+  - home branch
+  - patron type
+  - preferred language
+
+11.2 Inactive Patrons Report
+The system should generate a list of patrons with no circulation or electronic
+activity in the last X days (X configurable). The list should be configurable
+to System, Home Library, County, etc.
+
+================================================================================
+12. FUNCTIONAL REQUIREMENTS - TRANSACTION RECORDS
+================================================================================
+
+12.1 Transaction History Maintenance
+Transaction history is maintained for X days (X is configurable). Monthly and
+annual aggregate information is maintained indefinitely.
+
+12.2 Backroom Statistics Examples
+Transactions can be grouped by hour, terminal, branch, and system. Transactions
+include check-ins, check-outs, fines collected, patron registrations, etc., and
+can be queried by all transactions or by type of transaction.
+
+12.3 Types of Check-In
+The system counts all types of check-in individually and cumulatively:
+  - book-drop
+  - by terminal
+  - by user or self-service
+
+12.4 Types of Check-Out
+The system counts all types of check-out individually and cumulatively:
+  - staff check-out
+  - self check-out
+  - staff renewal
+  - self checkout renewal
+  - online renewal
+  - OPAC renewal
+
+12.5 Holds and Locations
+The system counts all hold requests, including how the hold was placed:
+  - at a staff desk
+  - at a public computer inside the library
+  - remotely
+
+12.6 Transactions Report
+The system can generate a report of transactions (holds placed, holds filled,
+and check-outs) per patron, per library, per selected group of libraries,
+per system, per county. The system displays the number of check-outs and
+placed holds per patron. Holds are subtotaled by type, e.g., active, frozen,
+and frozen-until holds.
+
+================================================================================
+13. FUNCTIONAL REQUIREMENTS - FINANCIAL RECORDS
+================================================================================
+
+13.1 Value of Items Report
+The system can generate a report of the value of items (based on data in item
+record) in the entire collection or a portion. Example: staff can obtain value
+of all items with status of longoverdue, or value of all DVDs in children's
+collection, or value of entire collection.
+
+13.2 Standard Accounting Practice and Auditing Requirements
+All reports and data archiving must comply with standard accounting practice
+and state, county, and municipal auditing requirements.
+
+13.3 Financial Data (Patrons)
+Fines, charges, waivers, and ecommerce transactions are attached to patron
+and item records. System tracks fines waived and payments made per library.
+Financial information can be updated easily. As an example, a staff user can
+easily query patron accounts with balances greater than X dollars.
+
+13.4 Financial Reports
+The system provides financial reports including:
+  - patron account balances by patron, home library, and system
+  - fines and charges accrued per time period (e.g., last twelve months, YTD,
+    last month) and per type of charge (overdue fines, damaged item charges,
+    lost item charges, etc.)
+  - fines waived per time period and per branch
+  - payments made per time period and per payment method (e.g., staff desk,
+    self-check station, OPAC)
+
+13.5 Financial Audit Trail
+The system maintains a ledger of patron payments, including which charges
+payments are applied to, to facilitate reconciliation.
+
+================================================================================
+14. APPENDIX A - REPORT TYPES
+================================================================================
+
+This appendix lists the various report categories and example report types
+that have been identified as necessary.
+
+CIRCULATION REPORTS:
+- Check in Count
+- Checkout Count (includes checkouts only)
+- Items overdue by X days (daily, shelf reading, patron contact info)
+- Circulation Count by Circ Modifier, Cat1, and Cat2 (Adult, YA, Juv...)
+- Renewals Count
+- Non-Cat Count
+- Circulation Count - total circ including checkouts, renewals, and noncats
+- Total Circulation Count (Merging both Cat and Non-Cat circulation data)
+- Circulation Count by Dewey
+- Circulation Count by Circ Modifier
+- Circulation Count by Shelving Location
+- Circulation Count by MARC
+- Circulation Count by Circ Location broken down by Patron County
+- Circulation Count by Circ Location broken down by Patron Home Library
+- Circulation Count by Age Demographic
+
+ITEMS REPORTS:
+- Items Added Count
+- Items Deleted Count
+- List of Items Added
+- Items Edited Count
+- Items Count
+- List of Items by Fines Stopped Reason
+- Items Currently Checked Out
+- Items more than XX days overdue (Overdue Materials Report)
+- Items marked longoverdue by system
+- List of Items with a > Total Use Count
+- List of Items with a < Total Use Count [Weeding Report]
+- Last Copy Report (last copy owned by a library system that was deleted)
+- List of Items by Creation Date Range
+- List of Items with a status of Missing
+- List of Items in Transit by both sending library and destination library
+- Claims returned
+- List of Long Overdue
+- Weeding report (date of last circulation and number of circs)
+- List of items with XXX in bib record
+- Age of collection by call number or shelving location
+- Price value of collection by call number or shelving location
+- Items to be Converted (batch converting items from one status to another)
+
+BIB RECORDS REPORTS:
+- Bib Records Count
+- Bib Records Edited Count
+- Bib Records Added by user by library Count
+- Bib Records with No Volumes attached
+- Bib Records missing specific MARC fields
+
+PATRONS REPORTS:
+- Patron Count
+- Patron Added Count by Month
+- New Patron Count (patrons added the previous month by Demographic Category)
+- Patron Count by Age Demographic
+- Patron Count by County
+- Patron Count by County, City, and Zip Code
+- Patron Count by Home Library
+- Patron Count by Profile Group
+- Patron Count by survey answer
+- List of patrons by survey answer
+- Voter Survey Responses County by Week
+- List of Patrons by Expiration Date
+- Voter Reg Survey Responses Count by Week
+- List of patrons who are BARRED
+- List of Patrons with inactive status
+- List of Staff Accounts with date of last password change and account expiration
+- List of Patrons with specific wording in notes
+
+HOLDS REPORTS:
+- Holds Purchase Alert
+- Items Sent for Holds
+- Items Received for Holds
+- IntraPINES Loans for all Systems
+- IntraPINES Loans for all Facilities
+- IntraPINES Loans by System
+- IntraPINES Loans by Facility
+- Unfilled Holds
+- Annual # of holds placed
+- Stale Holds (holds sitting on hold shelf waiting for pickup for too long)
+
+IN HOUSE USE REPORTS:
+- NonCat In House Use Count by Month
+- Cataloged In House Use Count
+
+TRANSITS REPORTS:
+- Items In Transit to Destination Library
+- Items In Transit by Sending Library
+
+BILLS REPORTS:
+- Bills currently Owed by Patrons
+- Detailed Payments Received
+- Detailed Forgive, Work, and Goods Payments Received
+- Detailed Voids
+- Aged Debt
+
+================================================================================
+15. FINE-GRAINED REPORTING REQUIREMENTS
+================================================================================
+
+This appendix contains detailed requirements for the reporting interface and
+functionality.
+
+15.1 Three Interfaces
+Three interfaces are needed:
+  a) Canned reports - generic reports set to run by the individual either ASAP
+     or recurring
+  b) Noncanned or On Demand Reports - preset but have the ability to edit
+     selection criteria and display options
+  c) Open Template Reporting - all attributes associated with circulation,
+     items, patrons, bills, and bibs to select from for filtering and display
+
+15.2 Canned Reports Details
+Canned reports are generic reports set to run by the individual either ASAP or
+recurring. There should be a certain set of templates that are pre-written and
+delivered with the product. Will have the ability for it to run by yesterday's
+data, last week's, last month's, or last year's. Canned reports can be checked
+off from a list to run at the same time and will be viewed within one document.
+
+15.3 On Demand Reports
+On Demand Reports would be for pre-selected criteria but for things like
+maintenance reports or collections development and would be set to run on demand.
+
+15.4 Open Template Reporting
+Open template would have all attributes associated with say circulation,
+patrons, items, bills, and bibs to select from for filtering and the same
+attributes for displaying.
+
+15.5 Quick Access Interface
+- Ability to hover over each title of canned report/template with pop-up box
+  with description
+- Check off any part of data you want
+- Ability to select Run ASAP, Hourly, Daily, Weekly, Monthly, Yearly
+- Output would be in Excel, HTML, and CSV format
+- Ability to enter email addresses for report to be sent to - would be great to
+  have an address book of regularly used addresses
+- Ability to edit recurring reports by adding or removing report selections
+  as well as editing the email addresses
+- Ability to determine the output results in a way such that a result could have
+  one column for last month's circs, another for previous month's circ, a percent
+  difference column, previous year's month column, a percent difference from
+  last month to last year's month column
+- The system provides a report to assist in the batch conversion of statuses
+- Ability to edit canned report for display purposes such as adding shelving
+  location as a display
+- Ability to add more canned reports via permission level
+- Ability to get a list of items deleted that was the last copy owned by the
+  library system in order to update WorldCat
+- Ability to prioritize certain types of reports so they will pop to the top of
+  the queue over resource-consuming reports
+- Ability to have a total use count on items as well as a use count broken down
+  by usage date range such as an FY use count or monthly use count
+- Ability to retrieve total circ including checkouts, renewals, and noncats
+  with a breakdown displaying those circ types
+- Ability to upload a text file such as barcodes or TCN to use for filtering
+  on a report
+- Ability to run reports for pre-overdue, overdue, and holds notices sent
+- Pivot table output
+- Tested and proven output
+- Ability to cancel a report that has already been scheduled to run or is
+  currently running
+- All nulls and blank fields must be included in the results no matter what is
+  being filtered or displayed
+- Ability to have real time reporting
+- Ability to have historical reporting - a reporting warehouse such that data
+  can be acquired on a given date or date range
+- Selection criteria is clearly defined
+- Report results would include the date selection criteria at the top or bottom
+  to quickly see date range selected along with the name of the report
+- Ability to select the survey name and not have to enter the survey id for
+  filtering
+- Ability to run a report on deleted items that were the last copy in the facility
+- Ability to pull MARC record fields so that they appear on a single row of data
+- Ability to run a report on transactions that occurred on x date and time on x
+  workstation or by x staff
+
+================================================================================
+END OF DRAFT DOCUMENT
+================================================================================
+
+This document represents the initial requirements gathering phase. It is
+intended to be reviewed by stakeholders and refined through additional
+interviews, surveys, and working group discussions.
+
+Feedback due: February 15, 2009
+Contact: Lori Ayre, Lori.Ayre@galecia.com
+         Lucien Kress, Lucien.Kress@galecia.com

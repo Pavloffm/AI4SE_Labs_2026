@@ -1,0 +1,113 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Volume reporting - how do we count what we have?
+Date: Mon, 06 Apr 2009 08:42:11 -0500
+
+Hi everyone,
+
+Quick question - how do I get a report that tells me how many items we have
+at Dalton-Whitman at any given moment? Not just total count, but broken down
+by categories. Like total items in library, number of holds, number of adult
+fiction, number of board books...
+
+We need this for our monthly board report and I'm currently pulling it
+manually from three different screens. :(
+
+-Maria
+===
+From: george.tuttle@piedmontlib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Volume reporting - how do we count what we have?
+Date: Mon, 06 Apr 2009 09:15:23 -0500
+
+Maria, are you getting the volume based on what's currently checked in?
+I assume items that are checked out still count toward your total volume,
+right? Just asking because the distinction matters for how we design this.
+
+Also - did anyone see that Pies 'n' Thighs is opening a second location?
+My wife is already planning our anniversary dinner there.
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Subject: Re: Volume reporting - how do we count what we have?
+Date: Mon, 06 Apr 2009 10:03:45 -0500
+
+Yes, George has a good point. The volume should include:
+1. New acquisitions (items recently added)
+2. Items on the shelf (checked in)
+3. Items out in circulation (checked out)
+
+I think Maria is asking for all three counts separately plus a total. That
+makes sense for collection management.
+
+Also, the breakdown by categories is important. We need things like:
+- Total items
+- Number of holds
+- Number of adult fiction
+- Number of board books
+- Maybe other categories too
+
+My daughter has her recital tomorrow and I'm trying not to think about work
+but here we are. :P
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Volume reporting - how do we count what we have?
+Date: Mon, 06 Apr 2009 11:20:01 -0500
+
+I second this request. At Twin Lakes we need this for our quarterly
+assessment. Can we make the categories customizable? Different libraries
+might want different breakdowns.
+
+Also, Robert - any idea if the database tracks acquisition date? It would
+be helpful to see how much volume has been added in the last 30/60/90 days.
+
+BTW, anyone know a good restaurant in Athens? I'm taking my mom out for
+her birthday dinner this weekend.
+===
+From: robert.chen@gapubliclib.org
+To: latoya.davidson@twinlileslib.org, pines-reports-working-group@gapl.org
+Subject: Re: Volume reporting - how do we count what we have?
+Date: Mon, 06 Apr 2009 14:33:22 -0500
+
+Latoya (note: typo in your email address) -
+
+Yes, the database tracks acquisition date for items. We can definitely
+build reports that show volume changes over time.
+
+For the volume report, I'm thinking we need a query that:
+1. Counts all items with a location = your library
+2. Groups by categories (fiction/non-fiction, format, etc.)
+3. Shows breakdowns with holds count per category
+
+We can also add date filters - volume at any point in time, not just
+current. This would be useful for historical comparisons.
+
+I'm heading to the Braves game tonight with some colleagues. Go Braves!
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Volume reporting discussion
+Date: Tue, 07 Apr 2009 08:15:00 -0500
+
+Thanks everyone for the input. Here's what I'm hearing for the "Material
+Volume Report" requirement:
+
+The system should provide the ability to report on the volume of material
+in a given library at any point in time, based on:
+- New acquisitions
+- Items on the shelf (checked in)
+- Items out in circulation (checked out)
+
+The report should allow breaking down volume in categories such as:
+- Total items in library
+- Number of holds
+- Number of adult fiction
+- Number of board books
+- Other customizable categories
+
+This will be tracked as a key requirement.
+
+Also, I need coffee. Real coffee. Not the office sludge.
+
+- Katherine

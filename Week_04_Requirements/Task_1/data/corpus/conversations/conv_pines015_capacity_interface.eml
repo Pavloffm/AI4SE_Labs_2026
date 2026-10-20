@@ -1,0 +1,102 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Can we see all branches at once?
+Date: Wed, 08 Apr 2009 09:30:00 -0500
+
+Hi team,
+
+As a branch manager, I need to see the capacity of all branches in our
+system, not just my own. When we're deciding where to move items or
+allocate resources, it helps to see the big picture.
+
+Is there a way to see an overview of all branches' capacity?
+
+Maria
+===
+From: george.tuttle@piedmontlib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Can we see all branches at once?
+Date: Wed, 08 Apr 2009 10:15:33 -0500
+
+Yes! This is so needed. Last month we had to move 200 books from Piedmont
+to three other branches because our HVAC broke. It would have been so much
+easier if I could have seen at a glance which branches had capacity.
+
+I'm also dealing with a mouse problem in the staff area. Anyone have a good
+exterminator recommendation?
+
+George
+===
+From: chris.sharp@gapubliclib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Subject: Re: Can we see all branches at once?
+Date: Wed, 08 Apr 2009 11:00:12 -0500
+
+This reminds me of the capacity interface from the King County spec. It
+was basically a dashboard showing all libraries' capacity at once.
+
+I think we need:
+1. A high-level summary view (all branches, key metrics)
+2. Ability to drill down into individual branches
+3. Maybe color-coding - green for under capacity, yellow for getting full,
+   red for at/over capacity
+
+My kid's soccer practice got rained out again. Third time this week.
+===
+From: robert.chen@gapubliclib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, chris.sharp@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Can we see all branches at once?
+Date: Wed, 08 Apr 2009 14:22:45 -0500
+
+From a technical standpoint, this is doable. The data is centralized in
+our database, so we can build queries that aggregate across all branches.
+
+One consideration: with 286 locations, the overview might get crowded.
+Maybe we should group by system/region? Or allow filtering?
+
+Also, what specific metrics define "capacity"? Is it:
+- Number of items vs. shelf space?
+- Number of physical items vs. a configured limit?
+- Circulation volume vs. processing capacity?
+
+Need to nail this down before building the interface.
+
+P.S. My cat has started sleeping on my keyboard while I work. Very
+distracting but also kind of adorable.
+===
+From: jennifer.durham@statesboro.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, george.tuttle@piedmontlib.org, chris.sharp@gapubliclib.org, robert.chen@gapubliclib.org, pines-reports-working-group@gapl.org
+Subject: Re: Can we see all branches at once?
+Date: Wed, 08 Apr 2009 15:40:18 -0500
+
+I'd want to be able to sort and filter. By region, by library type, by
+current load... And export to CSV for the directors who want spreadsheets.
+
+One more thing - can the capacity interface also show trends? Like, is
+this branch growing or shrinking? That helps with long-term planning.
+
+My mom sent me cookies in the mail today. Chocolate chip. She still
+remembers how I like them.
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: System capacity interface
+Date: Thu, 09 Apr 2009 09:00:00 -0500
+
+Quick summary on the system capacity interface discussion:
+
+The system should provide an interface showing the capacity of all branches.
+This should include:
+- High-level overview of all branches' capacity at once
+- Ability to drill down into individual branches
+- Sorting and filtering capabilities (region, type, load)
+- Trend data (growth/shrink patterns)
+- Export to CSV
+
+Robert will look into technical constraints around displaying 286 locations.
+Chris will draft initial mockups.
+
+Now someone please tell me where I can buy a decent cup of coffee around
+here.
+
+-Katherine

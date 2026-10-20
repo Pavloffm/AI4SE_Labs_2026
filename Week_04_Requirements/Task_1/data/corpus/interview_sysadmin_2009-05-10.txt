@@ -1,0 +1,123 @@
+================================================================================
+PINES REPORTS WORKING GROUP - INTERVIEW RECORD
+================================================================================
+
+Interview Date: May 10, 2009
+Interviewer: George Tuttle, Piedmont Regional Library
+Interview Duration: 55 minutes
+Location: PINES Central Office, IT Department Conference Room
+Format: Semi-structured interview
+
+INTERVIEWEE:
+Name: Robert Chen
+Title: Senior Systems Administrator, PINES IT Department
+Years in IT: 15
+PINES experience: 3 years
+Technical expertise: Linux systems, PostgreSQL, network infrastructure,
+                     accessibility compliance
+
+PURPOSE OF INTERVIEW:
+To gather technical requirements for the Management Processes reporting system,
+including server environment, browser requirements, accessibility compliance,
+database architecture, and user permissions management.
+
+================================================================================
+TRANSCRIPT
+================================================================================
+
+GEORGE: Robert, thanks for taking the time to meet with me. Let's start with the
+server environment. What are the current server specifications for PINES?
+
+ROBERT: Our main server is a Red Hat Enterprise Linux 5 box with dual quad-core
+processors and 32GB of RAM. It runs PostgreSQL 8.3 for the database. We also
+have a secondary site that runs Solaris 10 on SPARC hardware for disaster
+recovery and reporting. So any reporting system needs to work on both Linux
+and Solaris.
+
+GEORGE: Do you anticipate any issues with report processing during peak hours?
+
+ROBERT: That's actually a major concern. Right now, when someone runs a complex
+report, it can tie up the database and slow down the circulation client. We
+need to make sure reports can be queued and processed in the background. Or we
+need read-only reporting replicas. The key requirement is that searches and
+reports can be processed during open hours without disrupting other system
+functions.
+
+GEORGE: What about browser requirements? Which browsers do libraries use?
+
+ROBERT: It's a mixed bag. Most of our libraries standardize on Microsoft
+Internet Explorer, but many have moved to Firefox. IE 6 is still common in
+our environment - I know it's old, but upgrading browsers on 200+ library
+computers is expensive and time-consuming. Firefox 2.0 is also still in use
+at some locations. So we need to support IE 6.0+ and Firefox 2.0+.
+
+GEORGE: Any thoughts on accessibility requirements?
+
+ROBERTY: This is non-negotiable. As a public institution, we MUST comply with
+Section 508 accessibility requirements. The system needs to work with:
+  - Screen readers like JAWS and NVDA
+  - Screen magnification software like ZoomText
+  - Other assistive technology programs
+
+We can't have blind staff members unable to run reports. The HTML output
+needs to be properly structured with alt tags, ARIA labels, and proper
+semantic HTML. And the system needs to produce standards-compliant HTML.
+
+GEORGE: What about the database architecture?
+
+ROBERT: We're using PostgreSQL now, which is a fully relational database.
+That's good - it means we can write complex joins. The reporting system needs
+to work with the relational structure, not fight against it. Some systems try
+to use denormalized reporting schemas, but that creates sync issues. I'd
+prefer to keep everything in the main relational database.
+
+GEORGE: How do you manage user permissions currently?
+
+ROBERT: PINES uses a role-based system. We have different levels of access:
+  - Patron (public access through OPAC)
+  - Staff (basic circulation functions)
+  - Local Admin (branch manager - can run reports, configure local settings)
+  - Global Admin (IT staff - full system access)
+
+The permission system needs to be controlled through security groups and/or
+"roles." This allows access control for individuals, workgroups, and arbitrary
+staff groups. The system needs to make it easy to administer these roles.
+Changing someone's permissions should be a simple matter of changing their
+role assignment.
+
+GEORGE: What about development and training environments?
+
+ROBERT: We definitely need separate environments. Developers need a place to
+test new reports without affecting production. And new staff members need a
+training environment where they can practice running reports without worrying
+about making mistakes.
+
+The key is that configurations developed in training/dev need to be migratable
+to production. We need export/import functionality for report templates,
+permission settings, and other configuration.
+
+GEORGE: Any other technical requirements?
+
+ROBERT: Yes - the OPAC module. The management reporting system must not
+constrain the OPAC in any way. These are separate concerns. Patrons need
+fast, responsive access to the catalog. If the reporting system is doing a
+big query, it should NOT slow down the OPAC.
+
+Also, the help system needs to be online, hierarchical, and cross-linked.
+Staff shouldn't have to call IT every time they want to know how to run a
+report. The HTML help needs to be searchable and easy to navigate.
+
+GEORGE: Thank you, Robert. This has been very informative.
+
+INTERVIEWER'S NOTES:
+- Robert's technical perspective confirms many requirements from other sources
+- Server environment (Linux/Solaris) is validated
+- Browser requirements (IE/Firefox) confirmed
+- Accessibility is not just a nice-to-have - it's a legal requirement
+- Database architecture needs are clear (relational, PostgreSQL-compatible)
+- Role-based access control is confirmed as essential
+- Separation of reporting from OPAC is critical
+- Development/training environments with migration capability needed
+
+COMPLETED BY: George Tuttle
+DATE: May 12, 2009

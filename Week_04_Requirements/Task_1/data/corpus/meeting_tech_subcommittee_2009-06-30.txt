@@ -1,0 +1,198 @@
+================================================================================
+PINES TECHNICAL SUBCOMMITTEE MEETING NOTES
+================================================================================
+
+Date: June 30, 2009
+Time: 2:00 PM - 4:30 PM EST
+Location: PINES Central Office, Server Room Conference Room
+Meeting Type: Technical Subcommittee - Architecture Discussion
+
+ATTENDEES:
+- Katherine Gregory (PINES Services Specialist)
+- Robert Chen (Senior Systems Administrator)
+- Dana Peeler (Ohoopee Regional Library) - Systems Librarian
+- George Tuttle (Piedmont Regional Library) - Assistant Director
+- Chris Sharp (PINES Staff Facilitator)
+
+NOTE TAKER: Chris Sharp
+
+1. OPENING REMARKS
+--------------------------------------------------------------------------------
+Katherine opened the meeting, explaining that the technical subcommittee was
+formed to discuss the architectural and implementation details of the Management
+Processes reporting system. This meeting would focus on design constraints,
+documentation requirements, and dependencies.
+
+2. DESIGN AND IMPLEMENTATION CONSTRAINTS - DETAILED DISCUSSION
+--------------------------------------------------------------------------------
+Robert led the discussion on design constraints.
+
+2.1 DATABASE CONSTRAINTS
+Robert confirmed that the system must use a fully relational database back-end.
+He noted that PostgreSQL is the current choice for PINES and it meets this
+requirement. The reporting system must work WITH the relational structure,
+not against it.
+
+"I strongly recommend against denormalization for reporting," Robert said.
+"Maintaining sync between a reporting warehouse and the live database creates
+more problems than it solves. Modern SQL databases can handle complex analytical
+queries if they're written properly."
+
+2.2 HTML COMPLIANCE
+The system must produce standards-compliant HTML. This was discussed in the
+context of the web-based interface, the help system, and report output.
+
+"We need to make sure all HTML output validates against W3C standards,"
+Robert noted. "This isn't just about looks - it's about compatibility with
+different browsers and assistive technologies."
+
+2.3 DEVELOPMENT AND TRAINING ENVIRONMENT
+The need for separate development, training, and production environments was
+discussed.
+
+"We have a dev server, a training server, and production," Robert explained.
+"What we need is a way to migrate configurations between them. Export/import
+of templates, permission settings, and saved queries."
+
+Katherine added: "And the training environment needs to be safe - staff should
+be able to experiment without risking production data."
+
+2.4 USER RIGHTS AND ROLES
+The role-based access control system was detailed:
+
+Robert: "We need security groups and/or 'roles' that allow access control for
+individuals, workgroups, and arbitrary staff groups. The system should make it
+easy to change someone's permissions by simply changing their role assignment."
+
+Key points:
+- Global Admin: Full system access
+- Local Admin: Branch-level reporting and configuration
+- Library Manager: Run approved reports, limited template modification
+- Staff: Run reports within assigned permissions
+- Patron: Indirect access through OPAC displays
+
+2.5 OPAC CONSTRAINTS
+"We absolutely cannot constrain the OPAC," Robert emphasized. "The management
+reporting system is separate from the public catalog. If a report is running,
+it should not slow down the OPAC."
+
+3. USER DOCUMENTATION REQUIREMENTS
+--------------------------------------------------------------------------------
+This section was led by Katherine.
+
+3.1 DATA SPECIFICATIONS
+The developer must provide complete data specifications for:
+- Authority records
+- Bibliographic records
+- Order records
+- Item records
+- Hold/request records
+- Other records maintained or accessed by Management Processes
+
+Katherine: "Staff need to understand the data structures to write effective
+queries. We need data dictionaries - field names, data types, relationships."
+
+3.2 PROCESS DESCRIPTIONS
+The developer must provide a thorough high-level description of major processes,
+including:
+- Bibliographic record import and export
+- Validation of bibliographic records against internal and external authority
+  sources
+- Standard reports
+
+3.3 ONLINE HELP SYSTEM
+The system shall provide an online, hierarchical, and cross-linked help system
+in HTML.
+
+Robert: "This has to be accessible too. The help system needs to work with
+screen readers."
+
+3.4 ERROR REPORTING
+The system shall provide thorough high-level error reporting and feedback,
+and shall allow low-level query-specific feedback for administrators.
+
+"When a report fails, we need to know WHY," Robert said. "Generic error messages
+like 'query failed' are useless. We need specifics - which table, which field,
+what kind of error."
+
+4. ASSUMPTIONS AND DEPENDENCIES - TECHNICAL PERSPECTIVE
+--------------------------------------------------------------------------------
+4.1 ENTERPRISE-LEVEL SYSTEM
+AS-1: Management Processes are part of an enterprise-level Library Automation
+System.
+
+Robert: "This means we can rely on the infrastructure - redundant servers,
+backup systems, network connectivity."
+
+4.2 CENTRAL CONSOLIDATION
+AS-2: Management Processes are consolidated at a central location, and accept
+input and provide services to multiple locations.
+
+"Centralization is good for reporting," Katherine noted. "We get a single
+source of truth. The challenge is making sure data from all locations is complete
+and current."
+
+4.3 LIBRARY AUTOMATION DEPENDENCIES
+DE-1: Management Processes rely on the data structures and functionality of
+an enterprise-level Library Automation System, including Acquisitions and
+Cataloging modules.
+
+"All our data comes from the ILS," Robert said. "The reporting system doesn't
+manage acquisitions or cataloging - it just reads the data."
+
+4.4 VENDOR INTEGRATION
+DE-2: Management Processes interface with a variety of vendor websites, via
+published APIs and/or automated transfer of standard-format data files
+(e.g., USMARC21, EDIFACT).
+
+"We have some vendors that provide EDI ordering data," Robert explained.
+"The reporting system needs to handle this data, but we can't rely on it
+being present at every library."
+
+4.5 OPAC INTEGRATION
+DE-3: Management Processes interact with a patron interface (OPAC).
+
+"Patrons create holds and circulation transactions through the OPAC," Robert
+said. "The reporting system queries this data, but doesn't modify it."
+
+5. FINE-GRAINED REPORTING REQUIREMENTS - TECHNICAL DETAILS
+--------------------------------------------------------------------------------
+The technical feasibility of several fine-grained requirements was discussed:
+
+5.1 OUTPUT FORMATS
+Excel, HTML, and CSV formats are required. Robert noted that CSV is the most
+reliable for data export, Excel is preferred by business users for pivot tables,
+and HTML is needed for web display.
+
+5.2 REAL-TIME vs HISTORICAL REPORTING
+"Some reports need to be real-time - like 'what's overdue today,'" Robert said.
+"Others are historical - 'what was the bill amount on June 30th?' We probably
+need a reporting warehouse for historical data."
+
+5.3 REPORT CANCELLATION
+The ability to cancel a scheduled or running report is technically feasible,
+but requires the system to check for cancellation signals during report
+processing.
+
+5.4 NULL HANDLING
+"All nulls and blank fields must be included in the results," Robert noted.
+"This is actually the default behavior in SQL, but we need to make sure it's
+explicitly required."
+
+5.5 SURVEY FILTERING
+The ability to filter by survey name rather than survey ID requires the system
+to resolve names to IDs internally.
+
+6. ACTION ITEMS
+--------------------------------------------------------------------------------
+  - Robert to research reporting warehouse options for historical data
+  - Katherine to compile technical requirements document
+  - George to draft the architecture overview section
+  - All attendees to review the fine-grained requirements for technical
+    feasibility
+  - Follow-up technical meeting scheduled for August 15, 2009
+
+Meeting adjourned at 4:25 PM.
+
+Notes prepared by: Chris Sharp
+Notes distributed: July 2, 2009

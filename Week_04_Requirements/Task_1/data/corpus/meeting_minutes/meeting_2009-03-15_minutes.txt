@@ -1,0 +1,139 @@
+================================================================================
+PINES REPORTS WORKING GROUP - FIRST MEETING MINUTES
+================================================================================
+
+Date: March 15, 2009
+Time: 10:00 AM - 12:30 PM EST
+Location: Georgia Public Library Service, Conference Room B, Atlanta, GA
+Meeting Type: Organizational / Planning
+
+ATTENDEES:
+- Katherine Gregory (PINES Services Specialist) - Chair
+- LaToya Davidson (Twin Lakes Library System) - Library Director
+- Jennifer Durham (Statesboro Regional Library System) - Assistant Library Director
+- Dana Peeler (Ohoopee Regional Library) - Systems Librarian
+- Susan Sexton-Cooley (Sara Hightower Regional Library) - Assistant Library Director
+- George Tuttle (Piedmont Regional Library) - Assistant Library Director
+
+APPROVAL OF AGENDA:
+The agenda was approved as circulated.
+
+1. CALL TO ORDER AND INTRODUCTIONS
+--------------------------------------------------------------------------------
+Katherine Gregory called the meeting to order at 10:05 AM. She introduced
+herself as the facilitator for the Reports Working Group. She noted that this
+group was formed in late February 2009 following discussions at the PINES
+Annual Conference about difficulties library staff were experiencing with the
+current reports interface in Evergreen.
+
+Katherine explained that King County Library System (WA) had previously worked
+with Galecia Group to develop a comprehensive Software Requirements Specification
+for a reports interface. PINES staff decided to use that as a foundation and
+adapt it for our specific needs. She mentioned that Lori Ayre and Lucien Kress
+from Galecia Group had been contacted and were willing to share their draft.
+
+2. FORMATION AND MISSION DISCUSSION
+--------------------------------------------------------------------------------
+Dana Peeler moved to adopt the following mission statement for the working
+group. The motion was seconded by Susan Sexton-Cooley and carried unanimously:
+
+  "Reports Working Group Mission:
+   - Document optimal Reports functionality within a future Evergreen release
+     and develop a list of requirements.
+   - Become the Reports testing group, through which all new Reports development
+     would be filtered.
+   - Compile a list of reports needed for an Executive Reports Interface.
+   - Determine and create templates needed for all PINES libraries."
+
+3. SCOPE AND OBJECTIVES
+--------------------------------------------------------------------------------
+Jennifer Durham asked about the scope of the group's work. Katherine explained
+that the group would focus on Management Processes - that is, reports and
+analysis tools used by library managers, administrators, and staff for
+planning, evaluation, and oversight purposes. She clarified that this does NOT
+include day-to-day patron-facing functions (those are part of the OPAC and
+circulation client).
+
+The following scope items were identified:
+
+  - Analyzing the Library collection and its use by patrons
+  - Analyzing branch capacity and optimal distribution of the collection
+  - Analyzing demographics and interests of patrons
+  - Analyzing staff productivity and workflow
+  - Tracking and verifying financial transactions
+
+Susan Sexton-Cooley noted that the current specification presupposes the
+general data structures and functionality of a full-fledged ILS. She said
+PINES is currently working on separate specifications for Acquisitions and
+Cataloging modules. The group agreed to specify only those requirements that
+directly or indirectly relate to management activities.
+
+Dana Peeler raised the question of user interface specification. Katherine
+noted that while UI would eventually need detailed specification, for now the
+focus should be on functional requirements. She mentioned that UI and data
+structures would require further specification using an iterative, prototype-
+oriented methodology.
+
+4. USER CLASSES AND CHARACTERISTICS
+--------------------------------------------------------------------------------
+The group discussed the different types of users who would interact with
+Management Processes:
+
+  Patron: A resident of the State of Georgia, either possessing a library card
+          or not, utilizing the resources of a PINES member library.
+          [Note from Katherine: Patrons interact through OPAC; they may use
+          reports indirectly through displays/screens at libraries]
+
+  Staff: Paid employees of PINES member libraries involved in designing and
+         providing services. This includes front-line circulation staff,
+         supervisors, etc.
+         [Jenny: Staff are our primary content creators for reports]
+
+  Local System Administrators: Management staff who oversee Library processes.
+                                They configure the system locally.
+                                [Susan: These are branch managers / assistant
+                                directors]
+
+  Library Managers: Supervise a single organizational unit and provide input to
+                   design and implementation of Library services.
+                   [LaToya: Directors and assistant directors in this role]
+
+  Library Directors: Members of the Library Executive Team who plan and direct
+                     Library services and priorities.
+                     [George: These are our board-level stakeholders]
+
+  Global System Administrator: Manages PINES at the consortium level,
+                               implementing software changes and configurations,
+                               and generating statistical reports for PINES as
+                               a whole.
+                               [Katherine: This is the PINES central IT team]
+
+5. INTENDED AUDIENCE
+--------------------------------------------------------------------------------
+Katherine stated that this SRS would be intended both for library managers and
+staff who may contribute additional requirements, and for software project
+managers and developers who will implement the requirements. She emphasized
+the need to aim for a high level of readability for a non-technical audience
+while providing enough specificity for developers.
+
+The group discussed the development approach. It was noted that development
+would likely happen in a highly collaborative and iterative environment where
+end-users have multiple opportunities to review prototypes. It was assumed that
+readers have a general understanding of Library services and processes and
+do not require definition of common Library terminology.
+
+6. NEXT STEPS
+--------------------------------------------------------------------------------
+Katherine assigned the following action items:
+
+  - Each member will conduct at least one interview with staff at their library
+    system to gather report needs (due by April 15, 2009)
+  - Katherine will circulate the King County / Galecia Group draft for reference
+  - A follow-up meeting is scheduled for July 20, 2009 to review findings
+  - A technical subcommittee meeting will be held in late June to discuss
+    architectural constraints
+
+Meeting adjurned at 12:25 PM.
+
+Minutes prepared by: Katherine Gregory, PINES Services Specialist
+Minutes distributed: March 17, 2009

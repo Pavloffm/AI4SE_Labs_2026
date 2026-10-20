@@ -1,0 +1,219 @@
+================================================================================
+PINES REPORTS WORKING GROUP - SECOND MEETING MINUTES
+================================================================================
+
+Date: July 20, 2009
+Time: 9:30 AM - 12:00 PM EST
+Location: Georgia Public Library Service, Conference Room A, Atlanta, GA
+Meeting Type: Regular Working Group Meeting
+
+ATTENDEES:
+- Katherine Gregory (PINES Services Specialist) - Chair
+- LaToya Davidson (Twin Lakes Library System) - Library Director
+- Jennifer Durham (Statesboro Regional Library System) - Assistant Library Director
+- Dana Peeler (Ohoopee Regional Library) - Systems Librarian
+- Susan Sexton-Cooley (Sara Hightower Regional Library) - Assistant Library Director
+- George Tuttle (Piedmont Regional Library) - Assistant Library Director
+- Chris Sharp (PINES Staff Facilitator)
+
+ABSENTEES: None
+
+1. CALL TO ORDER AND REVIEW OF ACTION ITEMS
+--------------------------------------------------------------------------------
+Katherine called the meeting to order at 9:35 AM.
+
+Action items from the March 15 meeting:
+  - Interviews with staff: COMPLETED (all members submitted reports)
+  - Circulation of Galecia Group draft: COMPLETED
+  - Technical subcommittee meeting: SCHEDULED for June 30 (see below)
+
+2. INTERVIEW FINDINGS SUMMARY
+--------------------------------------------------------------------------------
+Each member presented a summary of their interview findings:
+
+LaToya Davidson (Twin Lakes): Spoke with 3 branch managers. Key themes:
+  - Inventory and capacity reports are used daily
+  - Financial report needs are understood at the director level
+  - Need for cross-branch comparison reports
+
+Jennifer Durham (Statesboro): Spoke with 2 branch managers and 1 director.
+  Key themes:
+  - Report queue visibility is important
+  - Board/executive reports need to be pre-defined
+  - Data quality reports are needed
+
+Dana Peeler (Ohoopee): Spoke with 1 branch manager. Key themes:
+  - Staff login needs (card swipe) - already discussed via email
+  - In-transit item reports are critical for delivery coordination
+  - Missing/damaged item reports are needed per branch
+
+Susan Sexton-Cooley (Sara Hightower): Spoke with 1 branch manager. Key themes:
+  - Weeding reports are frequently used
+  - Shelf space utilization reports are important
+  - Demographic analysis for program planning
+
+George Tuttle (Piedmont): Spoke with 1 branch manager and 1 IT staff.
+  Key themes:
+  - Technical constraints (server OS, browser support)
+  - User permissions and role-based access
+  - Accessibility requirements
+
+3. OPERATING ENVIRONMENT REQUIREMENTS
+--------------------------------------------------------------------------------
+This section was led by Dana Peeler and George Tuttle, drawing on input from
+their interviews.
+
+OE-1: Management Processes must support the needs of a large, multiple-system
+      library consortium. Specifically, the system must support a library
+      consortium with 286 locations, 17 million annual circulations,
+      purchasing and processing over 900,000 items per year. It is highly
+      desirable that searches and reports can be processed during open hours
+      without disrupting other system functions.
+
+      [Discussion: George noted that Evergreen already handles this scale.
+      The concern is about report processing during peak hours. We need
+      background processing/queuing to prevent report generation from slowing
+      down the circulation client.]
+
+OE-2: Management Processes shall operate on a Linux or Solaris server.
+      [Consensus: Both Linux and Solaris are acceptable. Most PINES
+      installations use Linux, but some larger systems use Solaris.]
+
+OE-3: Management Processes shall be accessible through a web-browser or a
+      Windows-compatible client.
+      [Discussion: This is critical - some libraries prefer browser-based
+      access (no client install), others prefer the dedicated client for
+      better performance.]
+
+OE-4: If web-browser based, Management Processes shall be accessible through
+      Microsoft Internet Explorer (v.6.0 and later) and Mozilla Firefox
+      (v.2.0 and later).
+      [Discussion: We need to support both IE and Firefox because different
+      libraries standardize on different browsers. IE 6 is still common in
+      our library environments, even though it's old.]
+
+OE-5: Management Processes shall be accessible with screen-reading software,
+      screen-magnification software, and other software programs designed to
+      increase accessibility.
+      [Discussion: Susan emphasized this is a legal requirement for public
+      institutions. We need to support JAWS, NVDA, ZoomText, and other
+      assistive technologies. Section 508 compliance is mandatory.]
+
+4. DESIGN AND IMPLEMENTATION CONSTRAINTS
+--------------------------------------------------------------------------------
+This section was led by George Tuttle, drawing on his IT interview.
+
+CO-1: Management Processes shall use a fully relational database back-end.
+      [Discussion: Evergreen already uses PostgreSQL. We need to ensure our
+      reporting layer works properly with the relational structure.]
+
+CO-2: Management Processes shall produce standards-compliant HTML.
+      [Discussion: All web output needs to be valid HTML. This affects report
+      display, help system, and any web-based UI components.]
+
+CO-3: Management Processes shall provide a development and training environment
+      with the ability to migrate configurations to a production environment.
+      [Discussion: Katherine noted that Evergreen development follows this
+      pattern - developers have separate environments. We need to make sure
+      report templates and configurations can be exported/imported.]
+
+CO-4: User rights and privileges will be controlled through security groups
+      and/or "roles" that allow access control for individuals, workgroups,
+      and arbitrary staff groups.
+      [Discussion: George confirmed this is essential. We need flexible
+      role-based access control.]
+
+CO-5: These requirements shall not constrain functionality or features of the
+      Online Public Access Catalog (OPAC) module.
+      [Discussion: The management processes are separate from the public-
+      facing catalog. Changes to management reporting should not affect
+      patron access.]
+
+5. USER DOCUMENTATION REQUIREMENTS
+--------------------------------------------------------------------------------
+Katherine led a discussion on user documentation needs:
+
+UD-1: The software developer shall provide complete data specifications for
+      authority records, bibliographic records, order records, item records,
+      hold/request records, and other records maintained or accessed by
+      Management Processes.
+
+      [Discussion: Staff need to understand the data structures to write
+      effective queries. Data dictionaries are essential.]
+
+UD-2: The software developer shall provide a thorough high-level description
+      of major processes, including bibliographic record import and export,
+      validation of bibliographic records against internal and external
+      authority sources, and standard reports.
+
+      [Discussion: Process flow documentation helps staff understand how
+      data moves through the system.]
+
+UD-3: The system shall provide an online, hierarchical, and cross-linked help
+      system in HTML that describes and illustrates all system functions.
+
+      [Discussion: Context-sensitive help is critical. Staff shouldn't have
+      to leave the system to find documentation.]
+
+UD-4: The system shall provide thorough high-level error reporting and feedback
+      and shall allow low-level query-specific feedback for Local and Global
+      System Administrators from the front-end interface.
+
+      [Discussion: When reports fail, staff need to understand why. Error
+      messages should be meaningful.]
+
+6. ASSUMPTIONS AND DEPENDENCIES
+--------------------------------------------------------------------------------
+AS-1: Management Processes are part of an enterprise-level Library Automation
+      System.
+      [Discussion: This means we can rely on the infrastructure being
+      enterprise-grade. Evergreen is that system for PINES.]
+
+AS-2: Management Processes are consolidated at a central location, and accept
+      input and provide services to multiple locations.
+      [Discussion: Centralization enables consistent reporting but requires
+      good network connectivity.]
+
+DE-1: Management Processes rely on the data structures and functionality of an
+      enterprise-level Library Automation System, including Acquisitions and
+      Cataloging modules.
+      [Discussion: The data we report on comes from the ILS. We don't manage
+      acquisitions or cataloging ourselves.]
+
+DE-2: Management Processes interface with a variety of vendor websites, via
+      published APIs and/or automated transfer of standard-format data files
+      (e.g., USMARC21, EDIFACT).
+      [Discussion: Some libraries use external vendors for certain functions.
+      Our reporting needs to handle data from these sources too.]
+
+DE-3: Management Processes interact with a patron interface, also known as an
+      Online Public Access Catalog (OPAC).
+      [Discussion: Patron data (holds, circulation) is created in the OPAC.
+      Our reports need to query this data.]
+
+7. REPORTS WORKING GROUP MISSION REVIEW
+--------------------------------------------------------------------------------
+Katherine reviewed the working group's mission:
+
+  Reports Working Group Mission:
+  1. Document optimal Reports functionality within a future Evergreen release
+     and develop a list of requirements.
+  2. Become the Reports testing group, through which all new Reports development
+     would be filtered.
+  3. Compile a list of reports needed for an Executive Reports Interface.
+  4. Determine and create templates needed for all PINES libraries.
+
+All members agreed the mission is still accurate and relevant.
+
+8. ACTION ITEMS AND NEXT STEPS
+--------------------------------------------------------------------------------
+  - Technical subcommittee meeting: June 30, 2009 (Katherine to send agenda)
+  - Complete draft of requirements document: by September 1, 2009
+  - Katherine to circulate consolidated requirements list
+  - George and Dana to draft technical architecture section
+  - All members to continue gathering detailed report requirements
+
+Meeting adjourned at 12:00 PM.
+
+Minutes prepared by: Katherine Gregory, PINES Services Specialist
+Minutes distributed: July 22, 2009

@@ -1,0 +1,144 @@
+From: la.toyadavidson@twinlakeslib.org
+To: pines-reports-working-group@gapl.org
+Cc: finance.committee@gapl.org
+Subject: Financial reporting requirements - discussion thread
+Date: Mon, 13 Jul 2009 09:15:00 -0500
+
+Hi everyone,
+
+I've been working with our finance department at Twin Lakes to understand their
+reporting needs. They've identified several requirements that we should
+incorporate into our specifications. I'm sharing them here for discussion.
+
+Key needs:
+1. Value of items report - staff should be able to get the value of items
+   based on data in item records. This could be the entire collection, or a
+   portion. For example, they want to be able to get:
+   - Value of all items with status "longoverdue"
+   - Value of all DVDs in children's collection
+   - Value of entire collection
+
+2. Financial reports - staff need reports on:
+   - Patron account balances by patron, home library, and system
+   - Fines and charges accrued per time period (last 12 months, YTD, last month)
+   - Fines waived per time period and per branch
+   - Payments made per time period and per payment method (staff desk,
+     self-check, OPAC)
+
+3. Audit trail - system must maintain a ledger of patron payments, including
+   which charges payments are applied to, to facilitate reconciliation.
+
+4. Compliance - all reports and data archiving must comply with standard
+   accounting practice and state, county, and municipal auditing requirements.
+
+Thoughts?
+
+LaToya
+===
+From: george.tuttle@piedmontlib.org
+To: la.toyadavidson@twinlakeslib.org, pines-reports-working-group@gapl.org
+Cc: finance.committee@gapl.org
+Subject: Re: Financial reporting requirements - discussion thread
+Date: Mon, 13 Jul 2009 10:30:22 -0500
+
+LaToya,
+
+These are spot on. I want to add a few things from our perspective:
+
+- The financial audit trail is CRITICAL for our finance department. They need
+  to be able to trace every payment back to the specific charge it was applied
+  to. Without this, we can't reconcile our accounts properly.
+
+- Regarding the "value of items report" - the data is already in the item
+  records (purchase price field). We just need the system to be able to query
+  and aggregate this. This should be straightforward.
+
+- On compliance - we need to ensure that data archiving follows state and local
+  requirements. Some data needs to be retained for 7 years for audit purposes.
+  The system needs to enforce retention policies.
+
+George
+===
+From: susansexton-cooley@saraboblib.org
+To: la.toyadavidson@twinlakeslib.org, george.tuttle@piedmontlib.org, pines-reports-working-group@gapl.org
+Cc: finance.committee@gapl.org
+Subject: Re: Financial reporting requirements - discussion thread
+Date: Mon, 13 Jul 2009 11:45:01 -0500
+
+I agree with everything. A few additional points:
+
+- The financial data is attached to patron records AND item records. So when
+  we query for financial reports, we need to be able to join these data sources.
+
+- For fines and charges, the staff should be able to query patron accounts
+  with balances greater than X dollars. This is useful for identifying accounts
+  that need attention.
+
+- The financial reports need to show payments by method - cash, credit card,
+  check, etc. This helps with daily reconciliation.
+
+- Fines waived should be tracked per library because each library has its own
+  budget for waived fines.
+
+Susan
+===
+From: dana.peeler@ohoopeelib.org
+To: la.toyadavidson@twinlakeslib.org, george.tuttle@piedmontlib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Financial reporting requirements - discussion thread
+Date: Mon, 13 Jul 2009 14:20:33 -0500
+
+Adding from the staff perspective:
+
+- We need to easily query patron accounts with balances greater than X dollars.
+  Right now it takes forever to find these accounts manually.
+
+- Financial information needs to be easily updatable. When a patron makes a
+  payment at the front desk, we need the system to reflect that immediately.
+
+- Payments tracking by library is important for our end-of-month reports. Each
+  branch needs to be able to see what payments were collected at their location.
+
+Dana
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Cc: finance.committee@gapl.org
+Subject: SUMMARY: Financial reporting requirements - consolidated list
+Date: Tue, 14 Jul 2009 08:45:00 -0500
+
+Thanks everyone for the detailed discussion. Here's my consolidated summary of
+financial reporting requirements:
+
+1. VALUE OF ITEMS REPORT:
+   System can generate a report of the value of items (based on data in item
+   record) in the entire collection or a portion. Examples: value of all items
+   with status of "longoverdue", value of all DVDs in children's collection,
+   value of entire collection.
+
+2. COMPLIANCE:
+   All reports and data archiving must comply with standard accounting practice
+   and state, county, and municipal auditing requirements.
+
+3. FINANCIAL DATA (PATRONS):
+   Fines, charges, waivers, and ecommerce transactions are attached to patron
+   and item records. System tracks fines waived and payments made per library.
+   Financial information can be updated easily. A staff user can easily query
+   patron accounts with balances greater than X dollars.
+
+4. FINANCIAL REPORTS:
+   The system provides financial reports including:
+   - Patron account balances by patron, home library, and system
+   - Fines and charges accrued per time period (last 12 months, YTD, last month)
+     and per type of charge (overdue fines, damaged item charges, lost item
+     charges, etc.)
+   - Fines waived per time period and per branch
+   - Payments made per time period and per payment method (staff desk,
+     self-check station, OPAC)
+
+5. AUDIT TRAIL:
+   The system maintains a ledger of patron payments, including which charges
+   payments are applied to, to facilitate reconciliation.
+
+I'll add these to the master requirements list.
+
+- Katherine

@@ -1,0 +1,133 @@
+From: maria.rodriguez@dalton-whitman.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Patron reports by demographics - how?
+Date: Wed, 29 Apr 2009 09:15:00 -0500
+
+I need to run reports on patrons grouped by characteristics. The fields
+I need:
+- Age range
+- Zip code
+- County of residence
+- Home branch
+- Patron type
+- Preferred language
+
+Is this possible?
+
+Maria
+P.S. Does anyone else's cat sit on their keyboard when you're trying to
+work? Mine does it on purpose, I'm convinced.
+===
+From: jennifer.durham@statesboro.lib.org
+To: maria.rodriguez@dalton-whitman.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Patron reports by demographics - how?
+Date: Wed, 29 Apr 2009 09:50:00 -0500
+
+Yes, this is essential! We use these reports for program planning. Last
+month we targeted a summer reading program for teenagers, so we ran a
+report on patrons aged 13-18 in our zip code.
+
+Can we also GROUP BY these fields? Like, show me circulation by age range,
+or patron count by home branch?
+
+My son has his science fair project due next week. He's building a volcano
+that erupts with baking soda and vinegar. Classic.
+
+-Jenny
+===
+From: susansexton-cooley@saraboblib.org
+To: maria.rodriguez@dalton-whitman.lib.org, jennifer.durham@statesboro.lib.org, pines-reports-working-group@gapl.org
+Subject: Re: Patron reports by demographics - how?
+Date: Wed, 29 Apr 2009 10:30:00 -0500
+
+I need to be able to both LIMIT and GROUP BY patron characteristics.
+For example:
+- Limit: Show me only patrons in zip code 30501
+- Group By: Show me checkout counts grouped by age range
+
+The age ranges need to be configurable too. Like, 0-5, 6-10, 11-15, etc.
+Or 0-6, 7-12, 13-17, 18-24, 25-34... Whatever makes sense for the report.
+
+Got my haircut yesterday. Finally got rid of that awkward growing-out phase.
+Feels so much better.
+===
+From: latoya.davidson@twinlakeslib.org
+To: maria.rodriguez@dalton-whitman.lib.org, jennifer.durham@statesboro.lib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Patron reports by demographics - how?
+Date: Wed, 29 Apr 2009 11:15:00 -0500
+
+Preferred language is interesting - we have patrons who prefer Spanish,
+Vietnamese, Korean, and various other languages. This helps us decide which
+materials to purchase in translation.
+
+Also, "patron type" is important - adult, juvenile, senior, student, etc.
+Different types have different borrowing privileges.
+
+Can we combine demographic filters? Like "show me all Juvenile patrons in
+zip code 30505 who haven't checked anything out in 6 months"?
+
+My mom just asked me to help her set up FaceTime on her new iPhone. She's
+72 and technology is... an adventure.
+===
+From: dana.peeler@ohoopeelib.org
+To: maria.rodriguez@dalton-whitman.lib.org, jennifer.durham@statesboro.lib.org, susansexton-cooley@saraboblib.org, latoya.davidson@twinlakeslib.org, pines-reports-working-group@gapl.org
+Subject: Re: Patron reports by demographics - how?
+Date: Wed, 29 Apr 2009 12:00:00 -0500
+
+I think we should also consider what data is available. Some of these
+fields might not be consistently populated. For example, not all patrons
+provide their zip code or county.
+
+Should the report show nulls for missing data, or exclude those records?
+
+I spilled coffee on my shirt this morning. It's going to be one of those days.
+===
+From: robert.chen@gapubliclib.org
+To: dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Patron reports by demographics - how?
+Date: Wed, 29 Apr 2009 13:45:00 -0500
+
+From a technical standpoint, these queries are straightforward. All the
+fields mentioned (age range, zip code, county, home branch, patron type,
+preferred language) exist in the patron table.
+
+The "age range" is calculated from the birth_date field, which means we
+need to compute it at query time. We can create age brackets in the query.
+
+Combining filters is also doable - just add WHERE clauses. We can support
+both AND and OR logic.
+
+One consideration: if patrons haven't provided optional fields, they'll
+show up as null. We should include them in the report (with null values)
+rather than excluding them, because excluding data silently can lead to
+misleading results.
+
+My new monitor arrived today. Dual screens, here I come!
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Patron characteristics requirement
+Date: Thu, 30 Apr 2009 09:00:00 -0500
+
+Requirement consolidated:
+
+The system should allow queries and reports to be limited or grouped by
+various patron characteristics, including:
+- Age range
+- Zip code
+- County of residence
+- Home branch
+- Patron type
+- Preferred language
+
+Key points:
+- Both LIMIT (filter) and GROUP BY (aggregate) should be supported
+- Filters can be combined with AND/OR logic
+- Null values should be included in results
+- Age ranges should be configurable per report
+
+Action: Robert confirmed technical feasibility. Jenny will provide test cases
+from her summer reading program planning.
+
+-Katherine
+(P.S. Maria - yes, cats sit on keyboards on purpose. It's a universal law.)

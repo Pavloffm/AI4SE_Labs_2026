@@ -1,0 +1,128 @@
+From: jennifer.durham@statesboro.lib.org
+To: pines-reports-working-group@gapl.org
+Subject: Report features and interface requirements
+Date: Mon, 27 Jul 2009 08:30:00 -0500
+
+Team,
+
+I've been collecting feedback from directors across our region about report
+interface features. Here are the key requests:
+
+1. QUERY TOOL: We need a user-friendly interface for designing queries against
+   all record types. Staff should be able to select fields to query, select
+   values from picklists, use regular expressions from a dropdown, and use
+   Boolean operators.
+
+2. REPORT TEMPLATES: Admins need to create report templates that are available
+   to staff. Templates should be runnable as-is or modified. Changes shouldn't
+   compromise results. Admins should be able to limit which filters and display
+   fields can be altered.
+
+   Example: Front-line staff can set a call number range for a weeding report
+   or add/remove display fields from a pick list, but can't alter the template
+   to display deleted items.
+
+3. PERMISSIONS: We need distinct, fine-grained permission levels limiting who
+   can create and clone reports. Admins can create shared folders to allow or
+   disallow staff from running specific reports, and/or to run ad hoc reports
+   on specific sets of data.
+
+4. BOARD REPORTS: Pre-defined reports for library boards with basic statistics
+   (Georgia Annual Report requirements). Activity reports showing traffic and
+   volume of use - checkouts, check-ins, holds placed, holds filled. Cross-
+   tabulated per terminal, per branch, per system, per hour, per age range,
+   per patron type, per patron location.
+
+5. TRANSACTION ARCHIVE: Transactions archived protecting patron privacy per
+   State Law, while providing useful demographic statistics.
+
+6. QUERY SELECTIONS: System provides query selections along with results.
+
+7. REPORTS QUEUING: Ability to see where your report is in the queue.
+
+Jenny
+===
+From: susansexton-cooley@saraboblib.org
+To: jennifer.durham@statesboro.lib.org, pines-reports-working-group@gapl.org
+Subject: RE: Report features and interface requirements
+Date: Mon, 27 Jul 2009 10:15:00 -0500
+
+Jenny, this is great. Let me add some details about the report templates feature:
+
+The key benefit of templates is consistency. We want to make sure that when
+the director asks for "the weeding report," everyone runs the same report with
+the same criteria. Templates ensure this.
+
+We also need the ability to "clone" reports - take an existing template and
+create a new one based on it. This is different from modifying the template -
+it's creating a new variant.
+
+The permissions need to be easy to administer. If I change someone from "Staff"
+to "Manager," their report permissions should update automatically based on
+the role.
+
+- Susan
+===
+From: dana.peeler@ohoopeelib.org
+To: jennifer.durham@statesboro.lib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: RE: Report features and interface requirements
+Date: Mon, 27 Jul 2009 11:45:00 -0500
+
+One more thing on report queuing - staff get frustrated when they submit a
+report and never hear back. They need to see:
+- That their report is in the queue
+- How many reports are ahead of theirs
+- When their report was submitted
+- Status (waiting, running, completed, failed)
+
+Also, for the transaction archive - we need this for compliance. State law
+requires us to retain transaction data for X years, but patron privacy means
+we can't keep personally identifiable information.
+
+Dana
+===
+From: george.tuttle@piedmontlib.org
+To: jennifer.durham@statesboro.lib.org, susansexton-cooley@saraboblib.org, dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: RE: Report features and interface requirements
+Date: Mon, 27 Jul 2009 14:20:00 -0500
+
+I can confirm the importance of report queuing from the IT side. Without
+queue visibility, staff call the help desk thinking reports are "broken"
+when they're just waiting in line. A visible queue would reduce these calls
+significantly.
+
+Also, the ability to prioritize certain reports is crucial. A director's
+board report should be able to jump ahead of a staff member's ad-hoc query.
+
+George
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Report features thread
+Date: Tue, 28 Jul 2009 09:00:00 -0500
+
+Consolidating the report features discussion:
+
+1. QUERY TOOL: User-friendly interface for designing queries against all record
+   types. Boolean operators, picklists, regex support. Admin controls access.
+
+2. REPORT TEMPLATES: Admins create templates available to staff. Run as-is or
+   modified. Limit alterable filters/fields. Clone capability.
+
+3. REPORTS PERMISSIONS: Fine-grained permission levels. Shared folders. Easy
+   administration through roles.
+
+4. BOARD REPORTS: Pre-defined reports for boards. Cross-tabulated per
+   terminal/branch/system/hour/age/patron type/location.
+
+5. TRANSACTION ARCHIVE: Archive with privacy protection per State Law.
+
+6. QUERY SELECTIONS: Show criteria with results.
+
+7. REPORTS QUEUING: See position in queue, status, priority.
+
+8. PRIORITY: Important reports can jump queue.
+
+These are all being added to the requirements matrix.
+
+- Katherine

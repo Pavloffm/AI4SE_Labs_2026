@@ -1,0 +1,98 @@
+From: dana.peeler@ohoopeelib.org
+To: pines-reports-working-group@gapl.org
+Subject: Staff login difficulties - need for streamlined access
+Date: Thu, 09 Apr 2009 09:15:32 -0500
+
+Katherine,
+
+Following up on yesterday's call, I wanted to share what we're seeing at the
+front lines regarding staff login. At Ohoopee Regional, we have 15 public
+service computers that are used by 8 different staff members throughout the
+day. Currently, staff must type in their full username and password each time
+they sit down. This creates two problems:
+
+1. It slows down service - especially during busy periods, staff are spending
+   precious seconds logging in instead of helping patrons.
+2. It leads to security issues - staff get in a hurry and sometimes share
+   passwords or leave terminals logged in.
+
+We've seen other library systems implement card-swipe login for their ILS
+terminals. The staff member simply swipes their employee ID badge and is logged
+in immediately. This is much faster and more secure.
+
+However, we also need to support the traditional username/password method - not
+all staff may have ID cards, and we need a fallback. The system should support
+BOTH methods - streamlined login (e.g. card swipe) AND traditional login
+(individual login and password). The streamlined method should be optional but
+available.
+
+Can we add this to the requirements list?
+
+Thanks,
+Dana Peeler
+Systems Librarian, Ohoopee Regional Library
+===
+From: susansexton-cooley@saraboblib.org
+To: dana.peeler@ohoopeelib.org, pines-reports-working-group@gapl.org
+Subject: Re: Staff login difficulties - need for streamlined access
+Date: Thu, 09 Apr 2009 10:42:15 -0500
+
+Dana,
+
+I second this request. At Sara Hightower, we've had similar issues. One thing
+to consider: even with card swipe, we need individual authentication. The
+system must track WHICH staff member is logged in for audit purposes. The card
+is just a convenient way to identify the person, but it shouldn't bypass
+individual authentication entirely.
+
+Also - and this is important - the system should not REQUIRE the streamlined
+login. Some of our smaller branches may not have the infrastructure for card
+readers. So the requirement should be: "The system supports (but does not
+require) streamlined staff login methods."
+
+We've also discussed role-based access through security groups. This relates to
+the login requirement - when a staff member logs in (by any method), their
+permissions should be determined by their assigned security group/role.
+Administrators should be able to create and manage these groups.
+
+- Susan
+===
+From: george.tuttle@piedmontlib.org
+To: dana.peeler@ohoopeelib.org, susansexton-cooley@saraboblib.org, pines-reports-working-group@gapl.org
+Subject: Re: Staff login difficulties - need for streamlined access
+Date: Thu, 09 Apr 2009 11:20:08 -0500
+
+Adding to this - we need user rights and privileges to be controlled through
+security groups and/or "roles." This would allow access control for individuals,
+workgroups, and arbitrary staff groups.
+
+At Piedmont, we have several different types of staff:
+- Front desk staff (can run basic reports, limited filters)
+- Department heads (can create and modify templates)
+- System administrators (full access to all reports and permissions)
+
+Each of these should be a role that can be assigned to staff members. The system
+should make it easy to administer these roles - changing someone's permissions
+should be a simple matter of changing their role assignment, not modifying
+individual permissions.
+
+George Tuttle
+Assistant Director, Piedmont Regional Library
+===
+From: katherine.gregory@gapubliclib.org
+To: pines-reports-working-group@gapl.org
+Subject: SUMMARY: Staff login thread - adding to requirements doc
+Date: Fri, 10 Apr 11:03:45 -0500
+
+Thanks everyone for the input. I'm summarizing the key requirements from this
+thread and will add them to our growing list:
+
+1. System supports (but does not require) streamlined staff login methods,
+   e.g. card swipe or individual login/password.
+2. User rights and privileges controlled through security groups/roles.
+3. Access control for individuals, workgroups, and arbitrary staff groups.
+4. Easy administration of roles and permissions.
+
+I'll make sure these are tracked in our requirements matrix.
+
+- Katherine

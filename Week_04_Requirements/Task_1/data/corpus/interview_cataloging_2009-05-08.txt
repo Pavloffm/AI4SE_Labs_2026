@@ -1,0 +1,130 @@
+================================================================================
+PINES REPORTS WORKING GROUP - INTERVIEW RECORD
+================================================================================
+
+Interview Date: May 8, 2009
+Interviewer: Jennifer Durham, Statesboro Regional Library System
+Interview Duration: 50 minutes
+Location: Augusta-Reed Branch Library, Staff Meeting Room
+Format: Semi-structured interview
+
+INTERVIEWEE:
+Name: Thomas Wright
+Title: Senior Cataloger, Augusta-Reed Branch Library
+Years in librarianship: 8
+PINES experience: 4 years
+Responsibilities: Cataloging, collection development, weeding, data quality
+
+PURPOSE OF INTERVIEW:
+To gather requirements for the PINES Reports Working Group from the perspective
+of cataloging and collection management staff.
+
+================================================================================
+TRANSCRIPT
+================================================================================
+
+JENNIFER: Thomas, thanks for meeting with me. Let's start with your daily work.
+What kind of reporting needs do you have in cataloging?
+
+THOMAS: Well, one big area is uncataloged material. At Augusta-Reed, we get
+large shipments of paperback books and children's board books that arrive
+without individual catalog records. We need to be able to track these as
+inventory even though they're not fully cataloged.
+
+The requirements are: quick distribution (we need to process these fast),
+minimal branch labor (we can't spend a lot of time per item), and ability to
+identify how the material is being used. We also need to count transactions
+and include them in circulation statistics and reports.
+
+JENNIFER: That sounds like a significant workflow. What about transfers between
+branches?
+
+THOMAS: Yes, the item transfer utility is crucial for us. We often need to
+move batches of items between branches - for example, sending books to a mobile
+library unit or to an outreach program collection. The utility needs several
+capabilities:
+
+First, we need to query for candidate materials. Maybe we want all items in
+the children's section that haven't circulated in 6 months. Second, we need to
+save these queries for repeated use - we do this monthly. Third, we need to
+manually select titles from query results if we want to be more targeted.
+
+Fourth, we need to change records of selected items to move them to a new
+location. And there should be mechanisms for reverting items back to their
+original location after a set period of time - like when a mobile library
+returns to base.
+
+JENNIFER: What about reporting on missing and damaged items?
+
+THOMAS: We do monthly shelf reading and mark items as missing. I need a report
+that shows all missing and damaged items per branch. This helps me track
+collection health and identify patterns - if the same shelf always has missing
+items, we might need to relocate it.
+
+I also need the in-transit items report. When items are being transferred
+between branches, they sometimes get lost. The report should show items that
+have been in-transit for more than X days (configurable), per branch and per
+system. It should merge the transit-to and transit-from into one report for
+ease of use.
+
+JENNIFER: Let me ask about weeding and purging. What reports do you need there?
+
+THOMAS: Weeding reports are my most-used report type. I need to identify items
+for purging based on customizable criteria. For example:
+- Item has been in status "missing" for more than X months
+- Item has status "discard/weed"
+
+We also need a report to assist in converting items from one status to another.
+Sometimes I need to change 100 items from "missing" to "discard/weed" in batch.
+
+And the last copy report is CRITICAL. This singles out a library system's last
+copies, to assist catalogers who need to edit WorldCat entries. Last month, we
+almost deleted our last copy of a rare book before someone remembered to check
+WorldCat. If we had a report like this, it would save us from that situation.
+
+There also needs to be a quick, effective method for deleting volume entries
+along with copy entries, as well as records with no items attached. Right now,
+cleaning up these orphaned records takes forever.
+
+JENNIFER: What about tracking deletions?
+
+THOMAS: Yes, we need to count and track record deletions per location and per
+system. This is important for auditing - our directors want to know how many
+records we've deleted and why. It also helps with troubleshooting if something
+goes missing from the catalog.
+
+JENNIFER: Any other cataloging-specific requirements?
+
+THOMAS: Yes, a few:
+
+1. The shelf space report is important for collection management. For each
+   genre and format, I need to compare:
+   - Percentage of total circulations
+   - Percentage of the collection
+   - Percentage of total shelf space
+   This helps me decide where to allocate resources.
+
+2. The material volume report helps me understand how much we have. I need to
+   report on volume based on acquisitions, items on shelf, and items in
+   circulation, broken down by categories like total items, holds, adult
+   fiction, board books, etc.
+
+3. Data quality reports - items with invalid item type, items with long call
+   numbers, bibliographic records with no item records. These help me maintain
+   data integrity.
+
+4. I need to be able to see the last edit date on reports, but it should be
+   only when the item is edited and not include the last circulation. The
+   current system combines these dates.
+
+JENNIFER: Thank you, Thomas. This has been very detailed and helpful.
+
+INTERVIEWER'S NOTES:
+- Thomas provided very specific, actionable requirements
+- He emphasized the importance of batch operations and data quality
+- The last copy report and WorldCat integration are critical
+- He mentioned several requirements that overlap with other interviews,
+  confirming their validity
+
+COMPLETED BY: Jennifer Durham
+DATE: May 10, 2009
