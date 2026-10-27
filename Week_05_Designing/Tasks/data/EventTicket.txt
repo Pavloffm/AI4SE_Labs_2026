@@ -1,0 +1,25 @@
+# SYSTEM DESCRIPTION:
+
+The purpose of our project is to build a web application providing a set of services aimed at the management and proposals of events and distribution of tickets. The goal is provide to the users a way to discover events and buy or preorder tickets directly online. At the same time the application allows also the events’ managers to publish their events in order to promote them and eventually to give the possibility to sell tickets of the event through the website.
+
+# USER STORIES:
+1) As a client, I want to visit the web application, so that I can explore the functionalities.
+2) As a client, I want to register to the service, so that I can be able to use the user's features.
+3) As a client, I want to login to the service, so that I become an user, a manager or an admin.
+4) As a client, I want to explore the list of events, so that I can see any event.
+5) As an user, I want to access my personal page, so that I can see my data.
+6) As an user, I want to be able to add a favourite category, so that I can have email notifications about related events.
+7) As an user, I want to see the booked pre-sales, so that I can see them.
+8) As an user, I want to see the bought tickets, so that I can see them.
+9) As an user, I want to book a pre-sale, so that I obtain the pre-sale to access the event.
+10) As an user, I want to buy a ticket, so that I obtain the ticket to access the event.
+11) As a user, I want to pay for a ticket online so that I can get the ticket code.
+12) As an user, I want to logout, so that I become a client.
+13) As a manager, I want to see all events I have proposed.
+14) As a manager, I want to insert a new event, so that I can add it into the web application.
+15) As an manager, I want to access my personal page, so that I can see my data.
+16) As a manager, I want to logout, so that I become a client.
+17) As an admin, I want to add a new manager, so that he can publish events.
+18) As an admin, I want to logout, so that I become a client.
+19) As an admin, I want to access my personal page, so that I can see my data.
+20) As an user, I want to be able to regenerate my password in case i forgot it.

@@ -1,0 +1,48 @@
+# SYSTEM DESCRIPTION:
+
+Not Far(m) From Home is a platform that allows a direct interaction between local farmers and consumers, with the main purpose of being “km 0”.
+The Farmers will be able to post their fresh produce in the site, and the consumers to reserve the produce and select a day for the pickup at the Agricoltural Company.
+
+# USER STORIES:
+
+1) As a Client , I want to Register in the site so that I can use the site
+2) As a Client , I want to login in the site so that I can use the site
+3) As a Client , I want to not put my Credentials in the site every time a reload the site, so that I can use the site
+4) As a Client , I want to logout, so that no one else use my account
+5) As a Client , I want to see my personal information
+6) As a Client , I want to See Hot products, so that i can discover the product in the season
+7) As a Client , I want to See Agricultural companies in my area, so that i can choose where to buy products
+8) As a Client , I want to See products for each Agricultural company, so that I can buy From them
+9) As a Client , I want to Add products to my cart, so that i can buy them
+10) As a Client, I want to Remove products from my cart, so that i can decide what to buy
+11) As a Client , I want to see the products in my cart, so that i can see want I am going to buy
+12) As a Client , I want to Complete an order, so that I can choose a date to go and pick up the products
+13) As a Client , I want to Open in google Maps the Location of the Agricultural company, so that i can find directions to it easly
+14) As an Agricultural Company, I want to Add products in inventory, so that I can show my clients the new produce
+15) As an Agricultural Company, I want to Remove products in inventory, so that My clients don't try to buy an item that I don't have anymore
+16) As an Agricultural Company, I want to Modify products in inventory, so that I can change price and quantities on an item
+17) As an Agricultural Company, I want to Registrer in the site, so that i can be visible and start doing business in the site
+18) As an Agricultural Company, I want to Login, so that i can work on the site
+19) As an Agricultural Company, I want to not put my Credentials in the site every time a reload the site, so that I can use the site easily
+20) As an Agricultural Company, I want to logout from the site
+21) As an Agricultural Company, I want to see my personal information
+22) As the Administrator of the site, I want to login in the site
+23) As the Administrator of the site, I want to not put my Credentials in the site every time a reload the site
+24) As the Administrator of the site, I want to logout from the site
+25) As the Administrator of the site, I want to delete malevolus user
+26) As the Administrator of the site, I want to see all orders, so that I can better analyze how the platform is doing
+27) As the Administrator of the site, I want to see all users, so that I can better analyze how the platform is doing
+28) As the Administrator of the site, I want to get user details, so that I can have some clear view over the user
+29) As the Administrator of the site, I want to modify users, so that I can do site maintenance
+30) As the Administrator of the site, I want to see all areas, so that I can do site maintenance
+31) As the Administrator of the site, I want to get all Agricultural company by areas, so that I can analyze how they are distributed
+32) As the Administrator of the site, I want to get all Agricultural company details, so that I can do platform maintenance
+33) As the Administrator of the site, I want to get product by seller, so that I can do site maintenance
+34) As the Administrator of the site, I want to get product by id, so that I can do site maintenance
+35) As the Administrator of the site, I want to add an area, so that if there is some request for that area to be added, I can
+36) As the Administrator of the site, I want to add product, so that I can do site maintenance
+37) As the Administrator of the site, I want to modify product, so that I can do site maintenance
+38) As the Administrator of the site, I want to delete product, so that I can do site maintenance
+39) As the Administrator of the site, I want to delete an area, so that I can do site maintenance
+40) As a client, i want to see all my orders
+41) As a farmer, i want to see all my orders
