@@ -1,0 +1,62 @@
+[
+  {
+    "file": "playground/playground/enums.py",
+    "class": "OrderStatus",
+    "method": "is_terminal",
+    "docstring": "    \"\"\"True when the status ends further transitions.\"\"\""
+  },
+  {
+    "file": "playground/playground/inventory.py",
+    "class": "InventoryLedger",
+    "method": "__contains__",
+    "docstring": "        \"\"\"Return whether ``sku`` normalises to a SKU with positive on-hand stock.\"\"\""
+  },
+  {
+    "file": "playground/playground/inventory.py",
+    "class": "Warehouse",
+    "method": "stock_report",
+    "docstring": "        \"\"\"Return a mapping of SKU to available quantity.\"\"\""
+  },
+  {
+    "file": "playground/playground/orders.py",
+    "class": "OrderStateMachine",
+    "method": "transition",
+    "docstring": "        \"\"\"Return ``target`` if the transition is allowed, else raise.\"\"\""
+  },
+  {
+    "file": "playground/playground/orders.py",
+    "class": "OrderLog",
+    "method": "by_status",
+    "docstring": "        \"\"\"Yield orders whose status matches ``status``.\"\"\""
+  },
+  {
+    "file": "playground/playground/models.py",
+    "class": "Customer",
+    "method": "can_afford",
+    "docstring": "        \"\"\"Return True if ``balance + total`` does not exceed the credit limit.\"\"\""
+  },
+  {
+    "file": "playground/playground/orders.py",
+    "class": "Order",
+    "method": "__len__",
+    "docstring": "        \"\"\"Return the number of line items.\"\"\""
+  },
+  {
+    "file": "playground/playground/pricing.py",
+    "class": "BulkDiscountPricing",
+    "method": "price",
+    "docstring": "        \"\"\"Return the base price, less the discount if the quantity qualifies.\"\"\""
+  },
+  {
+    "file": "playground/playground/events.py",
+    "class": "EventBus",
+    "method": "__contains__",
+    "docstring": "        \"\"\"Return whether any handlers are registered for ``event_type``.\"\"\""
+  },
+  {
+    "file": "playground/playground/models.py",
+    "class": "Money",
+    "method": "__bool__",
+    "docstring": "        \"\"\"Return True when the amount is non-zero.\"\"\""
+  }
+]
