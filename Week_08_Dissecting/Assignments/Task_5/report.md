@@ -1,0 +1,1 @@
+Right now I have many skills, so it don't make sense adding much more. I don't have ideas right now, they appeared when I using skills and find what my skills lacking. So I add actually interesting skill grilling that help to answer questions that LLM will better understand what it actually need to do.

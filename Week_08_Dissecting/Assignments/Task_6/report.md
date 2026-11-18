@@ -1,0 +1,1 @@
+Right now I don't have big amount for subagents, but have only one that it possible needed for my situation. My favorite approach is to use deep-search with tree of choose prompting.

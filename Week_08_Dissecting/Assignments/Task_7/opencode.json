@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "task7": {
+        "type": "local",
+        "disabled": true,
+        "command": ["uv", "run", "--script", "server.py"],
+        "cwd": "."
+      }
+    }
+  }
+}
