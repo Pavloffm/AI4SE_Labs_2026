@@ -1,7 +1,7 @@
 # Assessment by human lecturer
 
 # Week 03 Prompting
-- Awarded: b out of 5b
+- Awarded: 4.75b out of 5b
 - Commentary: Breakdown below
 
 ## Task 1
